@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  frontend:
+    container_name: struggle-theme
+    build:
+      context: .
+      args:
+        #JEKYLL_UID: "${UID}"
+        #JEKYLL_GID: "${GID}"
+        #JEKYLL_DEBUG: "dev"
+        VERBOSE: "true"
+    ports:
+      - "4000:4000"
