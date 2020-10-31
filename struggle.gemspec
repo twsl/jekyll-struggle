@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["45483159+twsl@users.noreply.github.com"]
 
   spec.summary       = "A simple, sleek and modern Jekyll blog theme."
-  spec.homepage      = "https://github.com/twsl/blog-struggle"
+  spec.homepage      = "https://struggle.dev/"
   spec.license       = "MIT"
 
   spec.metadata["plugin_type"] = "theme"
@@ -16,7 +16,10 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", "~> 4.1.1"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.15.1"
-  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.7.1"
+  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.7.1"  
+  spec.add_runtime_dependency "jekyll-paginate", "~> 1.1.0"
+  spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4.0"
+  spec.add_runtime_dependency 'jekyll-autoprefixer', "~> 1.0.2"
 
   spec.add_development_dependency "bundler", "~> 2.1.4"
 end

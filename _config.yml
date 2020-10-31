@@ -1,51 +1,22 @@
-title: Your awesome title
-author:
-  name: GitHub User
-  email: your-email@domain.com
+title: struggle.dev
+
+tagline: Solving everyday problems of a developer
+
 description: > # this means to ignore newlines until "show_excerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  A blog highlighting and solving the everyday problems of a developer.
+  Includes  posts in the categories of coding, reversing, machine learning, home automation and more.
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
-# Minima date format
-# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
-minima:
-  date_format: "%b %-d, %Y"
+google_analytics: UA-XXXXXXXX
 
-  # generate social links in footer
-  social_links:
-    twitter: jekyllrb
-    github:  jekyll
-    # devto: jekyll
-    # dribbble: jekyll
-    # facebook: jekyll
-    # flickr:   jekyll
-    # instagram: jekyll
-    # linkedin: jekyll
-    # pinterest: jekyll
-    # youtube: jekyll
-    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
-    # youtube_channel_name: CloudCannon
-    # telegram: jekyll
-    # googleplus: +jekyll
-    # microdotblog: jekyll
-    # keybase: jekyll
+matomo:
+  uri: http://example.com
+  site_id: 1337
 
-    # Mastodon instances
-    # mastodon:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
-
-    # GitLab instances
-    # gitlab:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
+struggle:
+  date_format: "%-d %B %Y"
+  skin: light
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
@@ -55,6 +26,14 @@ minima:
 # Build settings
 theme: struggle
 
+#paginate: 5
+#paginate_path: "/posts/page:num/"
+
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+ - jekyll-paginate
+ - jekyll-sitemap
+ - jekyll-autoprefixer
+
+ # jekyll seo tag: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md

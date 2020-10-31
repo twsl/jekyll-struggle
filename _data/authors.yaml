@@ -1,0 +1,14 @@
+twsl:
+  picture: /img/twsl.png
+  name: twsl
+  email: twsl@struggle.dev
+  bio: Only bad code needs comments.
+  github: twsl
+  kaggle: twsl
+
+miscme:
+  picture: /img/miscme.png
+  name: miscme
+  email: miscme@struggle.dev
+  bio:
+  github: miscme

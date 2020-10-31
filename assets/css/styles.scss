@@ -3,5 +3,5 @@
 ---
 
 @import
-  "struggle/skins/{{ site.minima.skin | default: 'classic' }}",
+  "struggle/skins/{{ site.struggle.skin | default: 'light' }}/theme",
   "struggle/initialize";

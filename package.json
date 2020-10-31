@@ -1,0 +1,16 @@
+{
+  "name": "struggle",
+  "version": "0.1.0",
+  "description": "A simple, sleek and modern Jekyll blog theme.",
+  "main": "index.js",
+  "author": "twsl",
+  "license": "MIT",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^4.5.3",
+    "feather-icons": "^4.28.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

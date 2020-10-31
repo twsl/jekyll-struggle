@@ -1,0 +1,15 @@
+<!-- Scripts Start -->
+<script src="{{"/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" | relative_url }}"></script>
+<script src="{{"/assets/vendor/feather-icons/feather.min.js" | relative_url }}"></script>
+<script src="{{"/assets/vendor/aos/aos.js" | relative_url }}"></script>
+
+<script src="{{"/assets/js/scripts.js" | relative_url }}"></script>
+
+{%- if jekyll.environment == 'production' and site.google_analytics -%}
+{%- include google-analytics.html -%}
+{%- endif -%}
+
+{%- if jekyll.environment == 'production' and site.matomo -%}
+{%- include matomo.html -%}
+{%- endif -%}
+<!-- Scripts End -->

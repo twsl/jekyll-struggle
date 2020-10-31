@@ -22,7 +22,8 @@
 		"ms-azuretools.vscode-docker",
 		"visualstudioexptteam.vscodeintellicode",
 		"mrmlnc.vscode-scss",
-		"dbaeumer.vscode-eslint"
+		"dbaeumer.vscode-eslint",
+		"sissel.shopify-liquid"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
@@ -33,7 +34,7 @@
 	// Uncomment the next line if you want to keep your containers running after VS Code shuts down.
 	// "shutdownAction": "none",
 	// Uncomment the next line to run commands after the container is created - for example installing curl.
-	"postCreateCommand": "bundle install",
+	"postCreateCommand": "bundle install && yarn install && gulp",
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode"
 }

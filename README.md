@@ -17,7 +17,23 @@ See: https://code.visualstudio.com/docs/remote/create-dev-container
 - [Devcontainers](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/jekyll)
 - [](https://medium.com/@jameshamann/creating-your-own-jekyll-theme-gem-1f8180a0e4b8)
 - https://www.chrisanthropic.com/blog/2016/creating-gem-based-themes-for-jekyll/
+- https://www.codepedia.org/ama/how-to-handle-multiple-authors-in-jekyll/
+- https://medium.com/better-programming/an-introduction-to-using-jekyll-with-bootstrap-4-6f2433afeda9
 
+## Theme
+- [Best design](https://blog.uidesigndaily.com/)
+- [Clean blog](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll)
+- [Minima base theme](https://github.com/jekyll/minima)
+- [Blog example](https://theme-land.com/sapp/demo/blog-two-column.html)
+- [Central overlay example](https://demos.creative-tim.com/material-kit/index.html)
+- [Color Scheme](https://dribbble.com/shots/10540722-Investment-App-Wireframes)
+- [structure example](https://github.com/Huxpro/huxblog-boilerplate)
+- [clean white](https://r-oblas.avmthemes.ru/blog)
+- [animated header](https://templates.envytheme.com/aronix/default/blog-1.html)
+- [clean color](http://arty.flatheme.net/home/portfolio-clean-1.html)
+- [post example](http://arty.flatheme.net/blog/blog-fullwidth-clean.html)
+- [nice overview](https://preview.webpixels.io/purpose-website-ui-kit/pages/secondary/blog.html#)
+- [additional design rootui](https://html.nkdev.info/rootui/react/#/)
 
 ## Installation
 

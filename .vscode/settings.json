@@ -1,4 +1,9 @@
-{  
-  "editor.rulers": [120],
-  "files.eol": "\n"
+{
+  "editor.rulers": [
+    140
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "files.eol": "\n",
 }
