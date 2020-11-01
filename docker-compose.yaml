@@ -10,5 +10,5 @@ services:
         #JEKYLL_GID: "${GID}"
         #JEKYLL_DEBUG: "dev"
         VERBOSE: "true"
-    ports:
-      - "4000:4000"
+    #ports:
+      #- "4000:4000"

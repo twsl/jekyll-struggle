@@ -14,7 +14,6 @@ gulp.task('vendor', function(cb) {
 
   // fontawesome
   gulp.src([
-    './node_modules/@fortawesome/fontawesome-free/css/**/*',    
     './node_modules/@fortawesome/fontawesome-free/js/**/*'
   ])
   .pipe(gulp.dest('./assets/vendor/fontawesome'))

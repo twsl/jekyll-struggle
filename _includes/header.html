@@ -1,36 +1,39 @@
 <!-- Header Start -->
-<header class="site-header">
-  {%- assign default_paths = site.pages | map: "path" -%}
-  {%- assign page_paths = site.header_pages | default: default_paths -%}
-  {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
 
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" aria-label="Main navigation">
-    <div class="container flex-wrap flex-md-nowrap">
-      <a class="navbar-brand" rel="start" href="{{"/" | relative_url }}" aria-label="struggle.dev">
-        <i data-feather="triangle"></i>
-        <strong>{{ site.title | escape }}</strong>
-      </a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-              aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i data-feather="menu"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{{"/" | relative_url }}">Home</a>
-          </li>
-          {%- for path in page_paths -%}
-          {%- assign my_page = site.pages | where: "path", path | first -%}
-          {%- if my_page.title -%}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-          </li>
-          {%- endif -%}
-          {%- endfor -%}
-        </ul>
-      </div>
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" aria-label="Main navigation">
+  <div class="container flex-wrap flex-md-nowrap">
+    <a class="navbar-brand" rel="start" href="{{"/" | relative_url }}" aria-label="struggle.dev">
+      <i class="fas fa-glass-whiskey"></i>
+      <strong>{{ site.title | escape }}</strong>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{"/" | relative_url }}">Home</a>
+        </li>
+        {%- for path in page_paths -%}
+        {%- assign my_page = site.pages | where: "path", path | first -%}
+        {%- if my_page.title -%}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+        </li>
+        {%- endif -%}
+        {%- endfor -%}
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+<header class="header">
+  {%- include hero.html -%}
 </header>
 <!-- Header End -->
