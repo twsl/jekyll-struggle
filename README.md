@@ -2,9 +2,18 @@
 
 A simple, sleek and modern Jekyll blog theme made with love and Bootstrap.
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+## fastpages
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+This theme is intended to be used with [fastpages](https://github.com/fastai/fastpages), but tries to improve the style significantly. Therefore apart from replacing minima, some further modifications are rquired.
+
+Remove:
+```
+_includes/
+_layouts/
+_pages/
+_sass/minima/
+```
+
 
 ## Start
 
@@ -18,6 +27,11 @@ See: https://code.visualstudio.com/docs/remote/create-dev-container
 - https://www.chrisanthropic.com/blog/2016/creating-gem-based-themes-for-jekyll/
 - https://www.codepedia.org/ama/how-to-handle-multiple-authors-in-jekyll/
 - https://medium.com/better-programming/an-introduction-to-using-jekyll-with-bootstrap-4-6f2433afeda9
+- https://gist.github.com/JJediny/a466eed62cee30ad45e2
+- https://shopify.github.io/liquid/filters/slice/
+
+- https://pikock.github.io/bootstrap-magic/app/index.html#!/editor
+- https://getbootstrap.com/docs/4.1/components/card/
 
 ## Theme
 - [Best design](https://blog.uidesigndaily.com/)

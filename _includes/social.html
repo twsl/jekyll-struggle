@@ -1,136 +1,129 @@
 <!-- Social Start -->
-{%- assign social = site.struggle.social_links -%}
+<ul class="social-icons nav justify-content-center justify-content-md-end mt-3 mt-md-0">
+  {%- for author_kv in site.data.authors | keys -%}
+  {%- assign author = author_kv[1] -%}
 
-<ul class="social-icons">
-  {%- for glb in social.gitlab -%}
-  {%- if glb.username and glb.instance -%}
+  {%- if author.github -%}
   <li>
-    <a rel="me" href="https://{{ glb.instance | cgi_escape | escape}}/{{glb.username}}" title="{{ glb.username | escape }}">
-      <i class="fab fa-gitlab"></i>
-    </a>
-  </li>
-  {%- endif -%}
-  {%- endfor -%}
-  {%- if social.dribbble -%}
-  <li>
-    <a rel="me" href="https://dribbble.com/{{ social.dribbble | cgi_escape | escape }}" title="{{ social.dribbble | escape }}">
-      <i class="fab fa-dribble"></i>
-    </a>
-  </li>
-  {%- endif -%}
-  {%- if social.facebook -%}
-  <li>
-    <a rel="me" href="https://www.facebook.com/{{ social.facebook | cgi_escape | escape }}" title="{{ social.facebook | escape }}">
-      <i class="fab fa-facebook"></i>
-    </a>
-  </li>
-  {%- endif -%}
-  {%- if social.flickr -%}
-  <li>
-    <a rel="me" href="https://www.flickr.com/photos/{{ social.flickr | cgi_escape | escape }}" title="{{ social.flickr | escape }}">
-      <i class="fab fa-flickr"></i>
-    </a>
-  </li>
-  {%- endif -%}
-  {%- if social.github -%}
-  <li>
-    <a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}">
+    <a class="nav-link" target="_blank" rel="me" href="https://github.com/{{ author.github | cgi_escape | escape }}"
+       title="{{ author.github | escape }}">
       <i class="fab fa-github"></i>
     </a>
   </li>
   {%- endif -%}
-  {%- if social.stackoverflow -%}
+  {%- if author.gitlab -%}
   <li>
-    <a rel="me" href="https://stackoverflow.com/users/{{ social.stackoverflow | cgi_escape | escape }}"
-       title="{{ social.stackoverflow | escape }}">
+    <a class="nav-link" target="_blank" rel="me" href="https://gitlab.com/{{author.gitlab | cgi_escape | escape }}"
+       title="{{ author.gitlab | escape }}">
+      <i class="fab fa-gitlab"></i>
+    </a>
+  </li>
+  {%- endif -%}
+  {%- if author.stackoverflow -%}
+  <li>
+    <a class="nav-link" target="_blank" rel="me" href="https://stackoverflow.com/users/{{ author.stackoverflow | cgi_escape | escape }}"
+       title="{{ author.stackoverflow | escape }}">
       <i class="fab fa-stackoverflow"></i>
     </a>
   </li>
   {%- endif -%}
-  {%- if social.instagram -%}
+  {%- if author.twitter -%}
   <li>
-    <a rel="me" href="https://www.instagram.com/{{ social.instagram | cgi_escape | escape }}"
-       title="{{ social.instagram | escape }}">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </li>
-  {%- endif -%}
-  {%- if social.linkedin -%}
-  <li>
-    <a rel="me" href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}"
-       title="{{ social.linkedin | escape }}">
-      <i class="fab fa-linkedin"></i>
-    </a>
-  </li>
-  {%- endif -%}
-  {%- if social.pinterest -%}
-  <li>
-    <a rel="me" href="https://www.pinterest.com/{{ social.pinterest | cgi_escape | escape }}"
-       title="{{ social.pinterest | escape }}">
-      <i class="fab fa-pinterest"></i>
-    </a>
-  </li>
-  {%- endif -%}
-  {%- for mst in social.mastodon -%}
-  {%- if mst.username and mst.instance -%}
-  <li>
-    <a rel="me"
-       href="https://{{ mst.instance | cgi_escape | escape}}/@{{mst.username}}" title="{{ mst.username | escape }}">
-      <i class="fab fa-mastodon"></i>
-    </a>
-  </li>
-  {%- endif -%}
-  {%- endfor -%}
-  {%- if social.twitter -%}
-  <li>
-    <a rel="me" href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" title="{{ social.twitter | escape }}">
+    <a class="nav-link" target="_blank" rel="me" href="https://twitter.com/{{ author.twitter | cgi_escape | escape }}"
+       title="{{ author.twitter | escape }}">
       <i class="fab fa-twitter"></i>
     </a>
   </li>
   {%- endif -%}
-  {%- if social.youtube -%}
+  {%- if author.linkedin -%}
   <li>
-    <a rel="me" href="https://www.youtube.com/{{ social.youtube | cgi_escape | escape }}" title="{{ social.youtube | escape }}">
+    <a class="nav-link" target="_blank" rel="me" href="https://www.linkedin.com/in/{{ author.linkedin | cgi_escape | escape }}"
+       title="{{ author.linkedin | escape }}">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </li>
+  {%- endif -%}
+  {%- if author.dribbble -%}
+  <li>
+    <a class="nav-link" target="_blank" rel="me" href="https://dribbble.com/{{ author.dribbble | cgi_escape | escape }}"
+       title="{{ author.dribbble | escape }}">
+      <i class="fab fa-dribble"></i>
+    </a>
+  </li>
+  {%- endif -%}
+  {%- if author.facebook -%}
+  <li>
+    <a class="nav-link" target="_blank" rel="me" href="https://www.facebook.com/{{ author.facebook | cgi_escape | escape }}"
+       title="{{ author.facebook | escape }}">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </li>
+  {%- endif -%}
+  {%- if author.flickr -%}
+  <li>
+    <a class="nav-link" target="_blank" rel="me" href="https://www.flickr.com/photos/{{ author.flickr | cgi_escape | escape }}"
+       title="{{ author.flickr | escape }}">
+      <i class="fab fa-flickr"></i>
+    </a>
+  </li>
+  {%- endif -%}
+  {%- if author.instagram -%}
+  <li>
+    <a class="nav-link" target="_blank" rel="me" href="https://www.instagram.com/{{ author.instagram | cgi_escape | escape }}"
+       title="{{ author.instagram | escape }}">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </li>
+  {%- endif -%}
+  {%- if author.pinterest -%}
+  <li>
+    <a class="nav-link" target="_blank" rel="me" href="https://www.pinterest.com/{{ author.pinterest | cgi_escape | escape }}"
+       title="{{ author.pinterest | escape }}">
+      <i class="fab fa-pinterest"></i>
+    </a>
+  </li>
+  {%- endif -%}
+  {%- if author.youtube -%}
+  <li>
+    <a class="nav-link" target="_blank" rel="me" href="https://www.youtube.com/{{ author.youtube | cgi_escape | escape }}"
+       title="{{ author.youtube | escape }}">
       <i class="fab fa-youtube"></i>
     </a>
   </li>
   {%- endif -%}
-  {%- if social.youtube_channel -%}
+  {%- if author.telegram -%}
   <li>
-    <a rel="me" href="https://www.youtube.com/channel/{{ social.youtube_channel | cgi_escape | escape }}"
-       title="{{ social.youtube_channel_name | escape | default: 'YouTube' }}">
-      <i class="fab fa-youtube"></i>
-    </a>
-  </li>
-  {%- endif -%}
-  {%- if social.telegram -%}
-  <li>
-    <a rel="me" href="https://t.me/{{ social.telegram | cgi_escape | escape }}" title="{{ social.telegram | escape }}">
+    <a class="nav-link" target="_blank" rel="me" href="https://t.me/{{ author.telegram | cgi_escape | escape }}"
+       title="{{ author.telegram | escape }}">
       <i class="fab fa-telegram"></i>
     </a>
   </li>
   {%- endif -%}
-  {%- if social.keybase -%}
+  {%- if author.keybase -%}
   <li>
-    <a rel="me" href="https://keybase.io/{{ social.keybase | cgi_escape | escape }}" title="{{ social.keybase | escape }}">
+    <a class="nav-link" target="_blank" rel="me" href="https://keybase.io/{{ author.keybase | cgi_escape | escape }}"
+       title="{{ author.keybase | escape }}">
       <i class="fab fa-keybase"></i>
     </a>
   </li>
   {%- endif -%}
-  {%- if social.microdotblog -%}
+  {%- if author.microdotblog -%}
   <li>
-    <a rel="me" href="https://micro.blog/{{ social.microdotblog | cgi_escape | escape }}"
-       title="{{ social.microdotblog | escape }}">
+    <a class="nav-link" target="_blank" rel="me" href="https://micro.blog/{{ author.microdotblog | cgi_escape | escape }}"
+       title="{{ author.microdotblog | escape }}">
       <i class="fab fa-microdotblog"></i>
     </a>
   </li>
   {%- endif -%}
-  {%- if social.devto -%}
+  {%- if author.devto -%}
   <li>
-    <a href="https://dev.to/{{ social.devto | cgi_escape | escape }}" title="{{ social.devto | escape }}">
+    <a class="nav-link" target="_blank" rel="me" href="https://dev.to/{{ author.devto | cgi_escape | escape }}"
+       title="{{ author.devto | escape }}">
       <i class="fab fa-devto"></i>
     </a>
   </li>
   {%- endif -%}
+
+  {%- endfor -%}
 </ul>
 <!-- Social End -->

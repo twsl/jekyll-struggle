@@ -1,7 +1,5 @@
 title: struggle.dev
-
 tagline: Solving everyday problems of a developer
-
 description: > # this means to ignore newlines until "show_excerpts:"
   A blog highlighting and solving the everyday problems of a developer.
   Includes  posts in the categories of coding, reversing, machine learning, home automation and more.
@@ -25,9 +23,6 @@ struggle:
 # Build settings
 theme: struggle
 
-#paginate: 5
-#paginate_path: "/posts/page:num/"
-
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
@@ -36,3 +31,7 @@ plugins:
  - jekyll-autoprefixer
 
  # jekyll seo tag: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+
+ 
+paginate: 5
+paginate_path: /page:num/

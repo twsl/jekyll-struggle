@@ -1,54 +1,17 @@
 <!-- Footer Start -->
 <footer class="footer">
-
-  <div class="footer-widgets">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <!-- Text widget-->
-          <aside class="widget widget-text">
-            <div class="widget-title">
-              <h6>Follow Us</h6>
-            </div>
-            <div class="textwidget">
-              {%- if site.author %}
-              <ul class="contact-list">
-                {% if site.author.name -%}
-                <li class="p-name">{{ site.author.name | escape }}</li>
-                {% endif -%}
-                {% if site.author.email -%}
-                <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-                {%- endif %}
-              </ul>
-              {%- endif %}
-              <div class="social-links">
-                {%- include social.html -%}
-              </div>
-            </div>
-          </aside>
-        </div>
-        <div class="col-md-6">
-          <!-- Twitter widget-->
-          <aside class="widget twitter-feed-widget">
-            <div class="widget-title">
-              <h6>Feed</h6>
-            </div><a href="{{ 'feed.xml' | relative_url }}">
-              <i class="fas fa-rss"></i><span>Subscribe</span>
-            </a>
-          </aside>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="footer-bar">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="copyright">
-            <p>© 2018 Boomerang, All Rights Reserved. Design with love by
-              <data class="u-url" href="{{ "/" | relative_url }}"></data>
-            </p>
+      <div class="row align-items-center justify-content-md-between py-4 mt-4 delimiter-top">
+        <div class="col-md-6">
+          <div class="copyright text-sm font-weight-bold text-center text-md-left">
+            © 2020 <a href="" {{ "/" | absolute_url }}" class="font-weight-bold" target="_blank">struggle.dev</a>. All rights reserved.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="social-links">
+            {%- include social.html -%}
           </div>
         </div>
       </div>
