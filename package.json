@@ -6,9 +6,10 @@
   "author": "twsl",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "aos": "^2.3.4",
     "bootstrap": "^4.5.3",
-    "feather-icons": "^4.28.0"
+    "jquery": "^3.5.1"
   },
   "devDependencies": {
     "gulp": "^4.0.2"

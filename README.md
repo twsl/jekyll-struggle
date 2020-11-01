@@ -34,6 +34,8 @@ See: https://code.visualstudio.com/docs/remote/create-dev-container
 - [post example](http://arty.flatheme.net/blog/blog-fullwidth-clean.html)
 - [nice overview](https://preview.webpixels.io/purpose-website-ui-kit/pages/secondary/blog.html#)
 - [additional design rootui](https://html.nkdev.info/rootui/react/#/)
+- [blog perfect layout](https://themes.2the.me/Boomerang/1.2/start.html)
+- [central overlay](https://demo.createx.studio/createx/)
 
 ## Installation
 

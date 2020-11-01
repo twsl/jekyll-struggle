@@ -12,24 +12,25 @@ gulp.task('vendor', function(cb) {
     ])
     .pipe(gulp.dest('./assets/vendor/bootstrap'))
 
-  // feather-icons
+  // fontawesome
   gulp.src([
-    './node_modules/feather-icons/dist/**/*'
+    './node_modules/@fortawesome/fontawesome-free/css/**/*',    
+    './node_modules/@fortawesome/fontawesome-free/js/**/*'
   ])
-  .pipe(gulp.dest('./assets/vendor/feather-icons'))
+  .pipe(gulp.dest('./assets/vendor/fontawesome'))
 
-  // feather-icons
+  // aos
   gulp.src([
     './node_modules/aos/dist/**/*'
   ])
   .pipe(gulp.dest('./assets/vendor/aos'))
 
   // jQuery
-  // gulp.src([
-  //     './node_modules/jquery/dist/*',
-  //     '!./node_modules/jquery/dist/core.js'
-  //   ])
-  //   .pipe(gulp.dest('./assets/vendor/jquery'))
+  gulp.src([
+      './node_modules/jquery/dist/*',
+      '!./node_modules/jquery/dist/core.js'
+    ])
+    .pipe(gulp.dest('./assets/vendor/jquery'))
 
   cb();
 

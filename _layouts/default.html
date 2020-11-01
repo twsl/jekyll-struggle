@@ -4,13 +4,12 @@
 {%- include head.html -%}
 
 <body>
+  {%- include preloader.html -%}
 
   {%- include header.html -%}
 
   <main role="main" class="page-content" aria-label="Content">
-    <div class="wrapper">
-      {{ content }}
-    </div>
+    {{ content }}
   </main>
 
   {%- include footer.html -%}

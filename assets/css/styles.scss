@@ -4,4 +4,4 @@
 
 @import
   "struggle/skins/{{ site.struggle.skin | default: 'light' }}/theme",
-  "struggle/initialize";
+  "struggle/main";

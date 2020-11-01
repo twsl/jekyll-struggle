@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function (event) {
   // Your code to run since DOM is loaded and ready
-  console.log("hey");
+  console.log("first");
 
   AOS.init({
     startEvent: "load",
@@ -13,5 +13,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 window.addEventListener("load", function (event) {
   // Your code to run since DOM is loaded and ready
-  console.log("yey");
+  console.log("second");
+
+  $('div').is('.page-loader') && $('.page-loader').delay(500).fadeOut(800)
 });
