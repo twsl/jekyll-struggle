@@ -1,10 +1,26 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-      <div class="site-heading">
-        <h1>{{ site.title | escape }}</h1>
-        <span class="subheading">{{ site.tagline | escape }}</span>
+<!-- Header Hero Start -->
+<header class="section section-top section-full">
+  <div class="bg-overlay"></div>
+  <!-- Content Start -->
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <!-- Heading Start -->
+          <h1 class="text-white text-center mb-4 display-4 font-weight-bold">
+            {{ site.title | escape }}
+          </h1>
+          <!-- Heading End -->
+
+          <!-- Subheading Start -->
+          <p class="lead text-white text-center mb-5">{{ site.tagline | escape }}
+          </p>
+          <span class="subheading">{{ site.tagline | escape }}</span>
+          <!-- Subheading End -->
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <!-- Content End -->
+</header>
+<!-- Header Hero Start -->

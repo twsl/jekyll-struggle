@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section class="home py-5">
+<section class="section home bg-light py-5">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-lg-10 col-md-12 col-sm-12 col-xs-12 mx-auto">
@@ -13,9 +13,9 @@ layout: default
         {{ content | markdownify }}
 
         {% if site.paginate %}
-        {% assign posts = paginator.posts %}
+        {% assign rawposts = paginator.posts %}
         {% else %}
-        {% assign posts = site.posts %}
+        {% assign rawposts = site.posts %}
         {% endif %}
 
 

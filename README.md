@@ -4,7 +4,8 @@ A simple, sleek and modern Jekyll blog theme made with love and Bootstrap.
 
 ## fastpages
 
-This theme is intended to be used with [fastpages](https://github.com/fastai/fastpages), but tries to improve the style significantly. Therefore apart from replacing minima, some further modifications are rquired.
+This theme is intended to be used with [fastpages](https://github.com/fastai/fastpages), but tries to improve the style significantly.
+Therefore apart from replacing the referenced theme [minima](https://github.com/jekyll/minima), some further modifications are rquired.
 
 Remove:
 ```
@@ -33,10 +34,11 @@ See: https://code.visualstudio.com/docs/remote/create-dev-container
 - https://pikock.github.io/bootstrap-magic/app/index.html#!/editor
 - https://getbootstrap.com/docs/4.1/components/card/
 
+- [dark mode](https://medium.com/@derekkedziora/how-to-add-a-dark-mode-toggle-to-a-jekyll-site-a76dac00128d)
+
 ## Theme
 - [Best design](https://blog.uidesigndaily.com/)
 - [Clean blog](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll)
-- [Minima base theme](https://github.com/jekyll/minima)
 - [Blog example](https://theme-land.com/sapp/demo/blog-two-column.html)
 - [Central overlay example](https://demos.creative-tim.com/material-kit/index.html)
 - [Color Scheme](https://dribbble.com/shots/10540722-Investment-App-Wireframes)
@@ -50,8 +52,8 @@ See: https://code.visualstudio.com/docs/remote/create-dev-container
 - [blog perfect layout](https://themes.2the.me/Boomerang/1.2/start.html)
 - [central overlay](https://demo.createx.studio/createx/)
 - [theme](https://melwy.com/)
-- [dark mode](https://medium.com/@derekkedziora/how-to-add-a-dark-mode-toggle-to-a-jekyll-site-a76dac00128d)
 - [logo](https://placeholderlogo.com/)
+- http://themeturn.com/free/coral/
 
 ## Installation
 

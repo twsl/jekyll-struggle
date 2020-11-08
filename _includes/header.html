@@ -4,52 +4,85 @@
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" aria-label="Main navigation">
-  <div class="container flex-wrap flex-md-nowrap">
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-togglable fixed-top" id="mainNav" aria-label="Main navigation">
+  <div class="container">
+
+    <!-- Brand Start -->
     <a class="navbar-brand" rel="start" href="{{"/" | relative_url }}" aria-label="struggle.dev">
       <i class="fas fa-glass-whiskey"></i>
       <strong>{{ site.title | escape }}</strong>
     </a>
+    <!-- Brand End -->
+
+    <!-- Toggler Start -->
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
             aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
     </button>
+    <!-- Toggler End -->
+
+    <!-- Collapse Start -->
     <div class="collapse navbar-collapse" id="navbarResponsive">
+      <!-- Links Start -->
       <ul class="navbar-nav ml-auto">
+        {%- if page.url == "/" -%}
+        <li class="nav-item">
+          <a class="nav-link active" href="{{"/" | relative_url }}">Home</a>
+        </li>
+        {% else %}
         <li class="nav-item">
           <a class="nav-link" href="{{"/" | relative_url }}">Home</a>
         </li>
+        {%- endif -%}
+
         {%- for path in page_paths -%}
         {%- assign my_page = site.pages | where: "path", path | first -%}
         {%- if my_page.title -%}
+        {%- if page.url == my_page.url -%}
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+        </li>
+        {% else %}
         <li class="nav-item">
           <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
         </li>
         {%- endif -%}
+        {%- endif -%}
         {%- endfor -%}
-      </ul>
-      <ul class="navbar-nav">
+
+
+        {%- if page.url == "/" -%}
         <li class="nav-item menu-icon">
-          <a href="{{ 'search' | relative_url }}">
+          <a class="nav-link active" href="{{ 'search' | relative_url }}">
             <i class="fas fa-search"></i>
           </a>
         </li>
+        {% else %}
         <li class="nav-item menu-icon">
-          <a href="{{ 'feed.xml' | relative_url }}">
+          <a class="nav-link" href="{{ 'search' | relative_url }}">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+        {%- endif -%}
+        <li class="nav-item menu-icon">
+          <a class="nav-link" href="{{ 'feed.xml' | relative_url }}">
             <i class="fas fa-rss"></i>
           </a>
         </li>
         <li class="nav-item menu-icon">
-          <a href="#">
+          <a class="nav-link" href="#">
             <i class="fas fa-moon"></i>
           </a>
         </li>
       </ul>
+      <!-- Links Start -->
     </div>
+    <!-- Collapse End -->
+
   </div>
 </nav>
+<!-- Navbar End -->
 
-<header class="header">
-  {%- include hero.html -%}
-</header>
+{%- include hero.html -%}
 <!-- Header End -->

@@ -1,0 +1,22 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
+}
+body {
+  font-family: Muli,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0;
+  background-color: #fff;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}

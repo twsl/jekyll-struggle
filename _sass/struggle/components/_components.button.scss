@@ -1,0 +1,50 @@
+/*-------------------
+  BUTTONS STYLE
+----------------=----*/
+
+.btn {
+  padding: 1rem 2.5rem !important;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.btn-white{
+  background: #fff;
+  color: #111;
+}
+
+.btn[class*=outline] {
+  color: #212529
+}
+
+.btn[class*=outline].dropdown-toggle,
+.btn[class*=outline]:active,
+.btn[class*=outline]:active:focus,
+.btn[class*=outline]:focus,
+.btn[class*=outline]:hover {
+  background-color: transparent
+}
+
+.btn[class*=outline][class*=primary]:active,
+.btn[class*=outline][class*=primary]:active:focus,
+.btn[class*=outline][class*=primary]:focus,
+.btn[class*=outline][class*=primary]:hover {
+  color: #f5ba4b
+}
+
+.btn-circle {
+  display: inline-flex;
+  width: 4.20313rem !important;
+  height: 4.20313rem !important;
+  padding: 0 !important;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center
+}
+
+.btn:focus {
+  box-shadow: none !important
+}

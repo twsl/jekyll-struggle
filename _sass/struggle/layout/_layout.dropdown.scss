@@ -1,0 +1,35 @@
+.dropdown-menu {
+  opacity: 0
+}
+
+.dropdown-menu.show {
+  animation: .2s forwards b
+}
+
+@keyframes b {
+  to {
+      opacity: 1
+  }
+}
+
+.dropdown-item {
+  font-size: .6875rem;
+  font-weight: 500;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  transition: background-color .1s;
+  text-transform: uppercase
+}
+
+@media (min-width:1200px) {
+  .dropdown-item {
+      padding-top: .75rem;
+      padding-bottom: .75rem
+  }
+}
+
+@media (min-width:1200px) {
+  .dropdown-item + .dropdown-item {
+      border-top: 1px solid rgba(0, 0, 0, .1)
+  }
+}

@@ -9,8 +9,11 @@
     "@fortawesome/fontawesome-free": "^5.15.1",
     "aos": "^2.3.4",
     "bootstrap": "^4.5.3",
+    "hypothesis": "^1.579.0",
     "jquery": "^3.5.1",
-    "lunr": "^2.3.9"
+    "katex": "^0.12.0",
+    "lunr": "^2.3.9",
+    "mathjax": "^3.1.2"
   },
   "devDependencies": {
     "gulp": "^4.0.2"
