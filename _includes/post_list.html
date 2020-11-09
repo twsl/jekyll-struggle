@@ -1,5 +1,5 @@
 <li class="col-xl-12 col-xxl-6">
-  <div class="card my-3 {{- if include.is_first -}}{{ " card-top" }}{{%- endif -%}}">
+  <div class="card my-3 {%- if include.is_first -%}{{ " card-top" }}{%- endif -%}">
     {%- if site.show_image -%}
     {%- if post.image -%}
     <div class="col-4 d-table-cell p-3 v-align-middle">
@@ -7,6 +7,7 @@
     </div>
     {%- endif -%}
     {%- endif -%}
+    <!-- {{ post | inspect }} -->
     <div class="card-body">
       <h3 class="card-title">
         <a class="post-link" href="{{ post.url | relative_url }}">
@@ -15,13 +16,15 @@
       </h3>
       {%- if site.show_description and post.description  -%}
       <p class="card-text post-meta-description">{{ post.description }}</p>
-      {%- endif -%}
-
-      {%- if post.description == false and site.show_excerpts -%}
+      {% else %}
+      {%- if site.show_excerpts -%}
       <p class="card-text post-meta-description">{{ post.excerpt }}</p>
+      {%- endif -%}
       {%- endif -%}
 
       <p class="card-text post-meta"><small class="text-muted">{{ post.date | date: date_format }}</small></p>
+
+      <p class="card-text post-meta"><small class="text-muted">by {{ post.author | default: site.data.authors.first[0] | default: site.author }}</small></p>
     </div>
   </div>
 </li>

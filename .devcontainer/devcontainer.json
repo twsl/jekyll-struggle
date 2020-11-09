@@ -21,10 +21,10 @@
 	"extensions": [
 		"ms-azuretools.vscode-docker",
 		"visualstudioexptteam.vscodeintellicode",
+		"editorconfig.editorconfig",
+		"sissel.shopify-liquid",
 		"mrmlnc.vscode-scss",
 		"dbaeumer.vscode-eslint",
-		"sissel.shopify-liquid",
-		"editorconfig.editorconfig",
 		"redhat.vscode-yaml"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

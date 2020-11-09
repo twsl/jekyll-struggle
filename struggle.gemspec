@@ -12,11 +12,11 @@ Gem::Specification.new do |spec|
 
   spec.metadata["plugin_type"] = "theme"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(_layouts|_includes|_pages|_sass|assets|LICENSE|README|_config\.yml|index\.html)!i) }
 
   spec.add_runtime_dependency "jekyll", "~> 4.1.1"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.15.1"
-  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.7.1"  
+  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.7.1"
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1.0"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4.0"
   spec.add_runtime_dependency 'jekyll-autoprefixer', "~> 1.0.2"

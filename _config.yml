@@ -7,32 +7,42 @@ description: > # this means to ignore newlines until "show_excerpts:"
 show_excerpts: true # set to true to show excerpts on the homepage
 show_description: true
 
-google_analytics: UA-XXXXXXXX
+#google_analytics: UA-XXXXXXXX
 
-matomo:
-  uri: http://example.com
-  site_id: 1337
+#matomo:
+#  uri: http://example.com
+#  site_id: 1337
 
 struggle:
   date_format: "%-d %B %Y"
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+header_pages:
+  - about.md
+  - tags.html
 
 # Build settings
 theme: struggle
 
+# collections:
+#   pages:
+#     output: true
+#     permalink: /:path/
+
+# permalink: pretty
+
+include:
+  - _pages
+
 plugins:
- - jekyll-feed
- - jekyll-seo-tag
- - jekyll-paginate
- - jekyll-sitemap
- - jekyll-autoprefixer
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-autoprefixer
 
- # jekyll seo tag: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+  # jekyll seo tag: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 
- 
 paginate: 5
 paginate_path: /page:num/
