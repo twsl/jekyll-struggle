@@ -4,7 +4,8 @@ description: > # this means to ignore newlines until "show_excerpts:"
   A blog highlighting and solving the everyday problems of a developer.
   Includes  posts in the categories of coding, reversing, machine learning, home automation and more.
 
-show_excerpts: false # set to true to show excerpts on the homepage
+show_excerpts: true # set to true to show excerpts on the homepage
+show_description: true
 
 google_analytics: UA-XXXXXXXX
 

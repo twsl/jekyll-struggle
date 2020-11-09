@@ -62,6 +62,16 @@ See: https://code.visualstudio.com/docs/remote/create-dev-container
 
 - https://github.com/coliff/dark-mode-switch
 
+- http://themes.hody.co/html/bezel/blog.html
+
+- http://volar.makwan.net/blog.html
+- http://volar.makwan.net/index02.html
+- http://volar.makwan.net/index04.html
+
+
+- http://themes.hody.co/html/bezel/blog.html
+- http://themes.hody.co/html/bezel/blog-single.html
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:

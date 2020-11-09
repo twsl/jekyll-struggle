@@ -47,6 +47,19 @@ $grid-breakpoints: (
   xxl: 1400px
 ) !default;
 
+$font-family-sans-serif: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+$font-family-base: 'Poppins';
+//$headings-font-family:'Poppins', sans-serif;
+
+$enable-grid-classes:false;
+$spacer:1rem;
+$border-width:0;
+$btn-border-radius:.25rem;
+
+$card-border-color: rgba($black, 0.0625);
+$card-spacer-x: 3rem;
+
 /* ================= */
 // ABSTRACTS: VARIABLES LIGHT
 /* ================= */

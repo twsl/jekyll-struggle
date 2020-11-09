@@ -1,11 +1,14 @@
 .footer {
-  background: #222;
+  background: $gray-900;
   .nav-link {
-    color:white;
+    color:$white;
   }
   a {
-    color:white;
+    color:$white;
   };
+  .copyright {
+    color: $white;
+  }
 }
 
 .footer-bar p {

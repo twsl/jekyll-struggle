@@ -20,16 +20,16 @@ layout: default
 
 
         <!-- Hide posts if front matter flag hide:true -->
-        {% assign posts = ''|split:'' %}
+        {% assign posts = ''| split:'' %}
         {% for post in rawposts %}
         {% if post.hide != true %}
-        {% assign posts = posts|push:post%}
+        {% assign posts = posts | push:post%}
         {% endif %}
         {% endfor %}
 
         <!-- Sort posts by rank, then date -->
         {% assign grouped_posts = posts | group_by: "sticky_rank" | sort: "name", "last" %}
-        {% assign sticky_posts = ''|split:'' %}
+        {% assign sticky_posts = ''| split:'' %}
         {% assign non_sticky_posts = '' | split:'' %}
 
 
@@ -55,13 +55,14 @@ layout: default
         <ul class="post-list row">
           {%- assign date_format = site.struggle.date_format | default: "%b %-d, %Y" -%}
           {%- for post in posts -%}
-          <li class="">
-            {%- if site.show_image -%}
-            {%- include post_list_image_card.html -%}
-            {% else %}
-            {%- include post_list.html -%}
-            {%- endif -%}
-          </li>
+
+          {%- assign is_first = false -%}
+          {% if posts.first.url contains post.url %}
+          {%- assign is_first = true -%}
+          {% endif %}
+
+          {%- include post_list.html is_first=is_first -%}
+
           {%- endfor -%}
         </ul>
         <!-- Posts End -->
@@ -70,7 +71,7 @@ layout: default
         {% if site.paginate and site.posts.size > site.paginate %}
 
         <nav class="pager" aria-label="Pagination">
-          <ul class="pagination justify-content-center">
+          <ul class="pagination pagination-sm justify-content-center">
 
             {%- if paginator.previous_page %}
             <li class="page-item">
