@@ -55,6 +55,13 @@ See: https://code.visualstudio.com/docs/remote/create-dev-container
 - [logo](https://placeholderlogo.com/)
 - http://themeturn.com/free/coral/
 
+- https://codepen.io/AbubakerSaeed/pen/abzWqPb
+- https://codepen.io/P1N2O/pen/pyBNzX
+- https://codepen.io/BjornRombaut/pen/mOLGgX
+- https://codepen.io/AbubakerSaeed/pen/abzWqPb
+
+- https://github.com/coliff/dark-mode-switch
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
