@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "*"
+    tags:
+      - v*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Ruby Gemer
+        uses: katungi/Ruby-Gemer@V0.1-alpha
+
+      - name: Publish Gem to Github
+        uses: jstastny/publish-gem-to-github@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          owner: twsl
+      #- name: Release Gem
+      #if: contains(github.ref, 'refs/tags/v')
+      #uses: cadwallion/publish-rubygems-action@master
+      #env:
+      #GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      #RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
+      #RELEASE_COMMAND: rake release
