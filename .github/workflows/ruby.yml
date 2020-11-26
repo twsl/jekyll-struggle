@@ -14,13 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      # https://github.com/marketplace/actions/publish-gem-version-to-internal-github-package-registry-on-tag
-      - name: Build and Publish Ruby Gem on Tag Pushes
-        uses: bodyshopbidsdotcom/gh-action-publish-gem-on-tag@master
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          owner: twsl
-
       # https://github.com/marketplace/actions/release-gem-to-github-packages
       - name: Publish Gem to Github
         uses: jstastny/publish-gem-to-github@master
