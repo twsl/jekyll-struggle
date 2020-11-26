@@ -14,11 +14,14 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Ruby Gemer
-        uses: katungi/Ruby-Gemer@V0.1-alpha
-
       - name: Publish Gem to Github
         uses: jstastny/publish-gem-to-github@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          owner: twsl
+
+      - name: Build and Publish Ruby Gem on Tag Pushes
+        uses: bodyshopbidsdotcom/gh-action-publish-gem-on-tag@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           owner: twsl
