@@ -61,7 +61,7 @@ layout: default
           {%- assign is_first = true -%}
           {% endif %}
 
-          {%- include post_list.html is_first=is_first -%}
+          {%- include post_card.html is_first=is_first -%}
 
           {%- endfor -%}
         </ul>
@@ -109,7 +109,11 @@ layout: default
 
         {%- endif %}
         <!-- Paginate End -->
-
+        {%- else %}
+        <div class="nothing-to-see">
+          <h3 class="text-center mb-5 font-weight-bold block-effect">Nothing to see.</h3>
+          <p class="lead text-center mb-5">Come back later</p>
+        </div>
         {%- endif -%}
       </div>
     </div>
