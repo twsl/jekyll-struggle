@@ -14,17 +14,25 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7 # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      - run: bundle exec jekyll build --incremental
+
       # https://github.com/marketplace/actions/release-gem-to-github-packages
       - name: Publish Gem to Github
         uses: jstastny/publish-gem-to-github@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           owner: twsl
+
       # https://github.com/marketplace/actions/publish-to-rubygems
-      #- name: Release Gem
-      #if: contains(github.ref, 'refs/tags/v')
-      #uses: cadwallion/publish-rubygems-action@master
-      #env:
-      #GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      #RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
-      #RELEASE_COMMAND: rake release
+      - name: Release Gem
+        if: contains(github.ref, 'refs/tags/v')
+        uses: cadwallion/publish-rubygems-action@master
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
+          RELEASE_COMMAND: rake release
