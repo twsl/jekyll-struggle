@@ -1,0 +1,9 @@
+.theme-button
+{
+  cursor: pointer;
+}
+
+[data-theme="dark"] {
+  background-color: #111 !important;
+  color: #eee;
+}

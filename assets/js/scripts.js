@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 });
 
+$(window).on("load", function () {
+  console.log("window loaded");
+});
+
 window.addEventListener("load", function (event) {
   // Your code to run since DOM is loaded and ready
   console.log("second");
@@ -18,44 +22,36 @@ window.addEventListener("load", function (event) {
 
 $(function () {
   console.log("document loaded");
+
+  theme();
+
 });
 
-$(window).on("load", function () {
-  console.log("window loaded");
-});
+function theme() {
+  const darkSwitch = $('.theme-button');
+  if (darkSwitch) {
+    const darkThemeSelected =
+      localStorage.getItem('darkSwitch') !== null &&
+      localStorage.getItem('darkSwitch') === 'dark';
+    darkSwitch.checked = darkThemeSelected;
+    darkThemeSelected ? document.body.setAttribute('data-theme', 'dark') :
+      document.body.removeAttribute('data-theme');
 
+    $('.theme-button').on('click', function () {
+      if ($(this).find('svg').attr('data-icon') == 'moon' && $(this).find('svg').attr('data-prefix') == 'fas') {
+        $(this).find('svg').attr('data-icon', 'moon');
+        $(this).find('svg').attr('data-prefix', 'far');
 
+        document.body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('darkSwitch', 'dark');
+      } else {
+        $(this).find('svg').attr('data-icon', 'moon');
+        $(this).find('svg').attr('data-prefix', 'fas');
 
-// light dark
-const theme = localStorage.getItem('theme');
-if (theme === "dark") {
-  document.documentElement.setAttribute('data-theme', 'dark');
-}
-const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
-
-if (theme === "dark") {
-  document.getElementById("theme-toggle").innerHTML = "Light Mode";
-} else if (theme === "light") {
-  document.getElementById("theme-toggle").innerHTML = "Dark Mode";
-} else if (userPrefers === "dark") {
-  document.documentElement.setAttribute('data-theme', 'dark');
-  window.localStorage.setItem('theme', 'dark');
-  document.getElementById("theme-toggle").innerHTML = "Light Mode";
-} else {
-  document.documentElement.setAttribute('data-theme', 'light');
-  window.localStorage.setItem('theme', 'light');
-  document.getElementById("theme-toggle").innerHTML = "Dark Mode";
-}
-
-function modeSwitcher() {
-  let currentMode = document.documentElement.getAttribute('data-theme');
-  if (currentMode === "dark") {
-    document.documentElement.setAttribute('data-theme', 'light');
-    window.localStorage.setItem('theme', 'light');
-    document.getElementById("theme-toggle").innerHTML = "Dark Mode";
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    window.localStorage.setItem('theme', 'dark');
-    document.getElementById("theme-toggle").innerHTML = "Light Mode";
+        document.body.removeAttribute('data-theme');
+        localStorage.removeItem('darkSwitch');
+      };
+      resetTheme();
+    });
   }
 }
