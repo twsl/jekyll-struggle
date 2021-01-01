@@ -2,10 +2,13 @@
   a {
     color: $black;
   }
-  box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.03);
+  //box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+  //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
 }
 .card:hover {
-  box-shadow: 0 1rem 3rem rgba(31, 45, 61, 0.05) !important;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.05)!important;
+  //box-shadow: 0 1rem 3rem rgba(31, 45, 61, 0.05) !important;
 }
 .card-body {
   padding: 5rem 3rem !important;

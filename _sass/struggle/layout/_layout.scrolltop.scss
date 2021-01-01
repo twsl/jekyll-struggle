@@ -4,17 +4,16 @@
   bottom: 1.5625rem;
   right: 1.5625rem;
   z-index: 999;
-  background: rgba(255, 255, 255, .9);
+  background: $dark;
   height: 2.375rem;
   width: 2.375rem;
   line-height: 2.25rem;
   text-align: center;
   font-size: .875rem;
-  border-radius: 100%;
-  box-shadow: 0 0 0 5px rgba(0, 0, 0, .05);
   transition: .5s all ease;
   transform: translateY(4.25rem);
-  color: #788487;
+  color: $white;
+  border: 1px solid $white;
 }
 
 .scroll-top.scroll-top-visible {
