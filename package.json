@@ -6,7 +6,7 @@
   "author": "twsl",
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "aos": "^2.3.4",
     "bootstrap": "^4.5.3",
     "hypothesis": "^1.617.0",
