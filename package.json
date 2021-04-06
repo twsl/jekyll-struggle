@@ -6,12 +6,12 @@
   "author": "twsl",
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.2",
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "aos": "^2.3.4",
     "bootstrap": "^4.6.0",
-    "hypothesis": "^1.659.0",
-    "jquery": "^3.5.1",
-    "katex": "^0.12.0",
+    "hypothesis": "^1.738.0",
+    "jquery": "^3.6.0",
+    "katex": "^0.13.1",
     "lunr": "^2.3.9",
     "mathjax": "^3.1.2"
   },

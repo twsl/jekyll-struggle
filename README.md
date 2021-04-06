@@ -100,6 +100,17 @@ Or install it yourself as:
 
     gem install struggle
 
+## Update
+
+```
+bundle outdated
+bundle update
+```
+```
+yarn outdated
+yarn upgrade --latest
+```
+
 ## Contents At-A-Glance
 
 ### Layouts
