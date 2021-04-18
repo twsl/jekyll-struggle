@@ -4,11 +4,13 @@ twsl:
   email: twsl@struggle.dev
   bio: Only bad code needs comments.
   github: twsl
-  kaggle: twsl
+  kaggle: twsldev
+  #reddit: twsl
+  #twitter: twsl
 
 miscme:
   name: miscme
   picture: /img/miscme.png
   email: miscme@struggle.dev
-  bio:
+  bio: Fixing things
   github: miscme

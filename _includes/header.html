@@ -9,7 +9,7 @@
   <div class="container">
 
     <!-- Brand Start -->
-    <a class="navbar-brand" rel="start" href="{{"/" | relative_url }}" aria-label="struggle.dev">
+    <a class="navbar-brand" rel="start" href="{{" /" | relative_url }}" aria-label="{{ site.title | escape }}">
       <i class="fas fa-glass-whiskey"></i>
       <strong>{{ site.title | escape }}</strong>
     </a>
@@ -28,11 +28,11 @@
       <ul class="navbar-nav ml-auto">
         {%- if page.url == "/" -%}
         <li class="nav-item">
-          <a class="nav-link active" href="{{"/" | relative_url }}">Home</a>
+          <a class="nav-link active" href="{{" /" | relative_url }}">Home</a>
         </li>
         {% else %}
         <li class="nav-item">
-          <a class="nav-link" href="{{"/" | relative_url }}">Home</a>
+          <a class="nav-link" href="{{" /" | relative_url }}">Home</a>
         </li>
         {%- endif -%}
 

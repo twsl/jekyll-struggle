@@ -5,69 +5,35 @@ layout: default
 permalink: /about/
 ---
 
-<section class="section bg-light">
+<section class="section bg-light py-5">
   <div class="container">
     <div class="title text-center">
       <h2>About Us</h2>
       <h4>This is who we are</h4>
     </div>
-    <div class="section-content pt-25 pb-25">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <div class="team-member animated fadeInUp" data-animation="fadeInUp">
-            <div class="team-image">
-              <img src="images/team-1.jpg" alt="">
-            </div>
-            <div class="team-overlay">
-              <div class="team-info">
-                <h4>Luke Cage</h4><span>Founder &amp; CEO</span>
-                <ul class="team-social">
-                  <li><a href="#" target="_blank"><i class="hc-facebook"></i></a>
-                  </li>
-                  <li><a href="#" target="_blank"><i class="hc-twitter"></i></a>
-                  </li>
-                  <li><a href="#" target="_blank"><i class="hc-linkedin"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <div class="section-content pt-5">
+      <div class="row text-center justify-content-md-center">
+
+
+        {%- for author_kv in site.data.authors | keys -%}
+        {%- assign author = author_kv[1] -%}
+
+        <div class="col-xl-3 col-lg-6 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4">
+            <img src="{{ author.picture | relative_url }}" alt="author"
+                 width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm animated fadeInUp" data-animation="fadeInUp">
+            <h5 class="mb-0">{{ author.name }}</h5>
+            <span class="small text-uppercase text-muted">{{ author.bio }}</span>
+
+            <ul class="social mb-0 list-inline mt-3">
+              {%- include social_user.html author=author -%}
+            </ul>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="team-member animated fadeInUp" data-animation="fadeInUp" data-delay="300">
-            <div class="team-image">
-              <img src="images/team-2.jpg" alt="">
-            </div>
-            <div class="team-overlay">
-              <div class="team-info">
-                <h4>Jessica Jones</h4><span>Product Designer</span>
-                <ul class="team-social">
-                  <li><a href="#" target="_blank"><i class="hc-facebook"></i></a>
-                  </li>
-                  <li><a href="#" target="_blank"><i class="hc-twitter"></i></a>
-                  </li>
-                  <li><a href="#" target="_blank"><i class="hc-linkedin"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+
+        {%- endfor -%}
+
       </div>
     </div>
   </div>
 </section>
-
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at
-[jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll

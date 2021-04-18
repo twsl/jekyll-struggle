@@ -3,7 +3,14 @@
   {%- for author_kv in site.data.authors | keys -%}
   {%- assign author = author_kv[1] -%}
 
-  {%- include social_user.html author=author -%}
+  {%- if author.github -%}
+  <li>
+    <a class="nav-link" target="_blank" rel="me" href="https://github.com/{{ author.github | cgi_escape | escape }}"
+       title="{{ author.github | escape }}">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  {%- endif -%}
 
   {%- endfor -%}
 </ul>
