@@ -16,6 +16,12 @@
 @import "base/base.general";
 
 /* ================= */
+// VENDORS
+/* ================= */
+
+@import "vendors/bootstrap";
+
+/* ================= */
 // COMPONENTS
 /* ================= */
 
@@ -36,9 +42,3 @@
 @import "layout/layout.preloader";
 @import "layout/layout.scrolltop";
 @import "layout/layout.theme";
-
-/* ================= */
-// VENDORS
-/* ================= */
-
-@import "vendors/bootstrap";

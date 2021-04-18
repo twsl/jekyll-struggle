@@ -11,7 +11,7 @@
   //box-shadow: 0 1rem 3rem rgba(31, 45, 61, 0.05) !important;
 }
 .card-body {
-  padding: 5rem 3rem !important;
+  padding: 4.5rem 2.75rem !important;
 }
 .card-top {
   margin-top: -12.5rem !important;
@@ -19,4 +19,25 @@
 
 .nothing-to-see {
   padding: 12rem 0 15rem 0;
+}
+
+.card-img-top {
+  width: 100%;
+  max-height: 15rem;
+  object-fit: cover;
+}
+
+.card-text {
+  font-weight: 400;
+  color: #777;
+  font-size: 0.95em;
+}
+
+.avatar {
+  max-width: 40px;
+  min-width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10px;
 }
