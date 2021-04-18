@@ -2,10 +2,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
 
-<link rel="stylesheet" href="{{ "/assets/vendor/bootstrap/css/bootstrap.min.css" | relative_url }}">
+{% assign styles_url = "/assets/css/styles.css" | relative_url %}
+<link rel="stylesheet" href="{{ styles_url }}">
 
-<link rel="stylesheet" href="{{ "/assets/vendor/aos/aos.css" | relative_url }}">
+{% assign bootstrap_url = "/assets/vendor/bootstrap/css/bootstrap.min.css" | relative_url %}
+<link rel="stylesheet" href="{{ bootstrap_url }}">
+
+{% assign aos_url = "/assets/vendor/aos/aos.css" | relative_url %}
+<link rel="stylesheet" href="{{ aos_url }}">
+
+{% if site.use_math %}
+{% assign katex_url = "/assets/vendor/katex/katex.min.css" | relative_url %}
+<script src="{{ katex_url }}"></script>
+{% endif %}
 
 <!-- Styles End -->

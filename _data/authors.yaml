@@ -1,6 +1,6 @@
 twsl:
   name: twsl
-  picture: /img/twsl.png
+  picture: /images/twsl.png
   email: twsl@struggle.dev
   bio: Only bad code needs comments.
   github: twsl
@@ -10,7 +10,7 @@ twsl:
 
 miscme:
   name: miscme
-  picture: /img/miscme.png
+  picture: /images/miscme.png
   email: miscme@struggle.dev
   bio: Fixing things
   github: miscme

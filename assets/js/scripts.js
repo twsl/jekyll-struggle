@@ -69,7 +69,7 @@ function theme() {
 
     $('.theme-button').on('click', function () {
 
-      if (toggleFontawesomeIcon(darkSwitch, 'fas', 'far', 'moon', 'moon')) {
+      if (toggleFontawesomeIcon(darkSwitch, 'fas', 'fas', 'moon', 'sun')) {
         document.body.setAttribute('data-theme', 'dark');
         localStorage.setItem('darkSwitch', 'dark');
       }

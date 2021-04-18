@@ -27,12 +27,17 @@
       {%- endif -%}
 
       <div class="post-author">
-        <a class="d-flex align-items-center flex-wrap" href="/about/#{{ author }}">
+
+        {% for a in author %}
+        <a class="d-flex align-items-center flex-wrap" href="/about/#{{ a }}">
+          {%- if site.data.authors[a].picture -%}
           <div class="avatar">
-            <img class="img-fluid" src="{{ site.data.authors[author].picture | relative_url }}" alt="author">
+            <img class="img-fluid" src="{{ site.data.authors[a].picture | relative_url }}" alt="author" title="{{ a }}">
           </div>
-          {{ author }}
+          {%- endif -%}
+          {{ a }}
         </a>
+        {% endfor %}
       </div>
 
       <p class="card-text post-meta"><small class="text-muted">

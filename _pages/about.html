@@ -15,8 +15,9 @@ permalink: /about/
       <div class="row text-center justify-content-md-center">
 
 
-        {%- for author_kv in site.data.authors | keys -%}
-        {%- assign author = author_kv[1] -%}
+        {%- for author_kv in site.data.authors -%}
+        {%- assign author_k = author_kv | keys -%}
+        {%- assign author = author_k[1] -%}
 
         <div class="col-xl-3 col-lg-6 col-sm-6 mb-5">
           <div class="bg-white rounded shadow-sm py-5 px-4">

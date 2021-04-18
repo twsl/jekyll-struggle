@@ -4,9 +4,23 @@ description: > # this means to ignore newlines until "show_excerpts:"
   A blog highlighting and solving the everyday problems of a developer.
   Includes  posts in the categories of coding, reversing, machine learning, home automation and more.
 
-show_excerpts: true # set to true to show excerpts on the homepage
+# set to true to show excerpts on the homepage
+show_excerpts: true
+
+# Set this to true to get LaTeX math equation support
+use_math: true
+
+# Set this to true to display the summary of your blog post under your title on the Home page.
 show_description: true
+
+# Set this to true to display image previews on home page, if they exist
 show_image: true
+
+# Set this to true to turn on annotations with hypothes.is (https://web.hypothes.is/)
+annotations: false
+
+# Set this to true to display tags on each post
+show_tags: true
 
 #google_analytics: UA-XXXXXXXX
 
@@ -30,6 +44,12 @@ theme: struggle
 include:
   - _pages
 
+# This specifies what badges are turned on by default for notebook posts.
+default_badges:
+  github: true
+  binder: true
+  colab: true
+
 permalink: pretty
 
 # collections:
@@ -38,11 +58,18 @@ permalink: pretty
 #     permalink: /:path/
 
 plugins:
+  - jekyll-autoprefixer
   - jekyll-feed
+  - jekyll-gist
+  - jekyll-octicons
+  - jekyll-toc
+  - jekyll-twitter-plugin
+  - jekyll-relative-links
   - jekyll-seo-tag
+  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-autoprefixer
+  - jemoji
 
   # jekyll seo tag: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 
