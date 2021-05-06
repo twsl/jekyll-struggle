@@ -20,6 +20,15 @@ _sass/minima/
 
 See: <https://code.visualstudio.com/docs/remote/create-dev-container>
 
+## Inspo
+https://dribbble.com/fintory
+https://fintory.com/en/blog/why-is-motion-design-so-important-to-user-experience
+https://dribbble.com/shots/10540722-Investment-App-Wireframes
+
+
+
+
+
 ## Resources
 
 - [Build Jekyll iamge](https://github.com/alastairhm/alpine-jekyll)

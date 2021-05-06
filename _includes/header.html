@@ -26,13 +26,14 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <!-- Links Start -->
       <ul class="navbar-nav ml-auto">
+        {% assign root_url = "/" %}
         {%- if page.url == "/" -%}
         <li class="nav-item">
-          <a class="nav-link active" href="{{" /" | relative_url }}">Home</a>
+          <a class="nav-link active" href="{{ root_url | relative_url }}">Home</a>
         </li>
         {% else %}
         <li class="nav-item">
-          <a class="nav-link" href="{{" /" | relative_url }}">Home</a>
+          <a class="nav-link" href="{{ root_url | relative_url }}">Home</a>
         </li>
         {%- endif -%}
 
