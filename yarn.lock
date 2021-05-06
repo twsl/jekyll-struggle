@@ -939,10 +939,10 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
   integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
-hypothesis@^1.758.0:
-  version "1.758.0"
-  resolved "https://registry.yarnpkg.com/hypothesis/-/hypothesis-1.758.0.tgz#bdb26b9fbf1c9d7bbb15a1938294526f72f1c9b2"
-  integrity sha512-2HRWelfMiAP+nduv9HkFYSgSfN5VdOqopOsXEuJBJFPg2TTYtAfP8gwJ63QUUdPLBzjG9KjCccSA4UXNIJ1xXA==
+hypothesis@^1.771.0:
+  version "1.771.0"
+  resolved "https://registry.yarnpkg.com/hypothesis/-/hypothesis-1.771.0.tgz#1feb4442358c92936b8987b4bf15eca3533a551e"
+  integrity sha512-zbvZRozpqRdEGBubKaLhlrXwozkaHiOLzy/vzlxUrt4hNpeYyexLW/5yq4JLmO+uVds+B11EpbF48YsCGcCRTQ==
 
 inflight@^1.0.4:
   version "1.0.6"
@@ -1183,10 +1183,10 @@ just-debounce@^1.0.0:
   resolved "https://registry.yarnpkg.com/just-debounce/-/just-debounce-1.1.0.tgz#2f81a3ad4121a76bc7cb45dbf704c0d76a8e5ddf"
   integrity sha512-qpcRocdkUmf+UTNBYx5w6dexX5J31AKK1OmPwH630a83DdVVUIngk55RSAiIGpQyoH0dlr872VHfPjnQnK1qDQ==
 
-katex@^0.13.2:
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/katex/-/katex-0.13.2.tgz#4075b9144e6af992ec9a4b772fa3754763be5f26"
-  integrity sha512-u/KhjFDhyPr+70aiBn9SL/9w/QlLagIXBi2NZSbNnBUp2tR8dCjQplyEMkEzniem5gOeSCBjlBUg4VaiWs1JJg==
+katex@^0.13.5:
+  version "0.13.5"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.13.5.tgz#9e957dfa5428a66471ee1804f6ea8a6a784ecd19"
+  integrity sha512-n2uEzFpNFUOAlWs0eCgmT82LQyP+BlS45yBgnLRqe+ENp3+FEM3lM+cJwZwwxxONFgayyq1fm6n+w35vo2MaUg==
   dependencies:
     commander "^6.0.0"
 
@@ -1312,10 +1312,10 @@ matchdep@^2.0.0:
     resolve "^1.4.0"
     stack-trace "0.0.10"
 
-mathjax@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/mathjax/-/mathjax-3.1.2.tgz#95c0d45ce2330ef7b6a815cebe7d61ecc26bbabd"
-  integrity sha512-BojKspBv4nNWzO1wC6VEI+g9gHDOhkaGHGgLxXkasdU4pwjdO5AXD5M/wcLPkXYPjZ/N+6sU8rjQTlyvN2cWiQ==
+mathjax@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/mathjax/-/mathjax-3.1.4.tgz#4e8932d12845c0abae8b7f1976ea98cb505e8420"
+  integrity sha512-Okmc+F3l7vRWNMALbH0HMMoTJWVn1cbeDbybHppCeophIGdFS+xxD/OffYpZirUOHzesZostpzEwsLSst+4W8w==
 
 micromatch@^3.0.4, micromatch@^3.1.10, micromatch@^3.1.4:
   version "3.1.10"
