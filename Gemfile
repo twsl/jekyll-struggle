@@ -8,7 +8,7 @@ gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
 group :jekyll_plugins do
   gem "jekyll-autoprefixer", "~> 1.0.2"
   gem "jekyll-feed", "~> 0.15.1"
-  gem "jekyll-octicons", "~> 13.0.0"
+  gem "jekyll-octicons", "~> 14.1.0"
   gem "jekyll-remote-theme", "~> 0.4.3"
   gem "jekyll-twitter-plugin", "~> 2.1.0"
   gem "jekyll-relative-links", "~> 0.6.1"
