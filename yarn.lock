@@ -939,10 +939,17 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
   integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
+<<<<<<< HEAD
 hypothesis@^1.773.0:
   version "1.773.0"
   resolved "https://registry.yarnpkg.com/hypothesis/-/hypothesis-1.773.0.tgz#d9d0f30032135b6b49d13082e0448366cf86e7eb"
   integrity sha512-aNGsDnEc7AA07BxagN4hvmreeAPTFZH3b30V/Nh/qIGAZUmTmUAhzQbhHDCViBQkDXn4Y47ksSQm1KU3JObyVQ==
+=======
+hypothesis@^1.781.0:
+  version "1.781.0"
+  resolved "https://registry.yarnpkg.com/hypothesis/-/hypothesis-1.781.0.tgz#19f9230165499d50b1958f2e2776e1f9f538d6e0"
+  integrity sha512-6YxXTZhEag+aZ2ySeX3NlwQEV5QoEevqjrF/PKVBgJmt0rmRD+Klga8DwKdCRt8QnyH/McuKQ/MFDQ7eAXXWpA==
+>>>>>>> 4f4cdb46aac47496ecdb67666e23aedc71b3409b
 
 inflight@^1.0.4:
   version "1.0.6"
@@ -1183,10 +1190,17 @@ just-debounce@^1.0.0:
   resolved "https://registry.yarnpkg.com/just-debounce/-/just-debounce-1.1.0.tgz#2f81a3ad4121a76bc7cb45dbf704c0d76a8e5ddf"
   integrity sha512-qpcRocdkUmf+UTNBYx5w6dexX5J31AKK1OmPwH630a83DdVVUIngk55RSAiIGpQyoH0dlr872VHfPjnQnK1qDQ==
 
+<<<<<<< HEAD
 katex@^0.13.7:
   version "0.13.7"
   resolved "https://registry.yarnpkg.com/katex/-/katex-0.13.7.tgz#4b4e5c285467584163cb14f78cd24ab64373cc13"
   integrity sha512-EcwE7uFwlumQf4r+NRpx6Q1mCkoscVVfKiX20AHsusrwiJACMSzstfJ4Z0Poh1WxWTwmTBR1tOA9Qpq8C56oyQ==
+=======
+katex@^0.13.11:
+  version "0.13.11"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.13.11.tgz#66138ebf173f25ef130cd3a3ea3ea1d12a3f1362"
+  integrity sha512-yJBHVIgwlAaapzlbvTpVF/ZOs8UkTj/sd46Fl8+qAf2/UiituPYVeapVD8ADZtqyRg/qNWUKt7gJoyYVWLrcXw==
+>>>>>>> 4f4cdb46aac47496ecdb67666e23aedc71b3409b
   dependencies:
     commander "^6.0.0"
 
