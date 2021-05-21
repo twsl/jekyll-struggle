@@ -27,7 +27,7 @@
       <!-- Links Start -->
       <ul class="navbar-nav ml-auto">
         {% assign root_url = "/" %}
-        {%- if page.url == "/" -%}
+        {%- if page.url == root_url -%}
         <li class="nav-item">
           <a class="nav-link active" href="{{ root_url | relative_url }}">Home</a>
         </li>
