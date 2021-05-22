@@ -34,6 +34,9 @@ jobs:
           ruby-version: ${{ steps.ruby-version.outputs.value }} # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
+      - name: Install Rake
+        run: gem install rake
+
       - run: bundle exec jekyll build --incremental
 
       - uses: actions/delete-package-versions@v1
