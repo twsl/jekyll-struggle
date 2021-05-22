@@ -6,7 +6,7 @@ versions = JSON.parse(URI.open('https://pages.github.com/versions.json').read)
 
 Gem::Specification.new do |spec|
   spec.name          = "struggle"
-  spec.version       = "0.1.0"
+  spec.version       = "0.0.1"
   spec.authors       = ["twsl"]
   spec.email         = ["45483159+twsl@users.noreply.github.com"]
 
