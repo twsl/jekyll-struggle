@@ -3,7 +3,14 @@
 source "https://rubygems.org"
 gemspec
 
-gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
+require 'json'
+require 'open-uri'
+# Use URI.open after github uses ruby 3
+versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+
+#gem 'github-pages', versions['github-pages']
+
+gem "jekyll", versions['jekyll']
 
 group :jekyll_plugins do
   gem "jekyll-autoprefixer", "~> 1.0.2"

@@ -26,8 +26,7 @@ gulp.task('vendor', function (cb) {
 
   // jQuery
   gulp.src([
-    './node_modules/jquery/dist/*',
-    '!./node_modules/jquery/dist/core.js'
+    './node_modules/jquery/dist/*'
   ])
     .pipe(gulp.dest('./assets/vendor/jquery'));
 
