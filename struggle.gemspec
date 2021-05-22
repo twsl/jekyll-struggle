@@ -3,16 +3,17 @@
 require 'json'
 require 'open-uri'
 versions = JSON.parse(URI.open('https://pages.github.com/versions.json').read)
+package = JSON.parse(File.read('./package.json'))
 
 Gem::Specification.new do |spec|
-  spec.name          = "struggle"
-  spec.version       = "0.0.1"
+  spec.name          = package["name"]
+  spec.version       = package["version"]
   spec.authors       = ["twsl"]
   spec.email         = ["45483159+twsl@users.noreply.github.com"]
 
-  spec.summary       = "A simple, sleek and modern Jekyll blog theme."
-  spec.homepage      = "https://struggle.dev/"
-  spec.license       = "MIT"
+  spec.summary       = package["description"]
+  spec.homepage      = package["homepage"]
+  spec.license       = package["license"]
 
   spec.metadata["plugin_type"] = "theme"
 
