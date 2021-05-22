@@ -13,10 +13,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
+      - uses: senmu/download-json-property-action@v1.0.0
+        id: ruby-version
+        with:
+          url: 'https://pages.github.com/versions.json'
+          property_path: ruby
 
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3 # Not needed with a .ruby-version file
+          ruby-version: ${{ steps.ruby-version.outputs.value }} # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
       - run: bundle exec jekyll build --incremental
