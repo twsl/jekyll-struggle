@@ -43,7 +43,6 @@ jobs:
         uses: WPMedia/delete-github-package-versions@v0.4.10
         with:
           version: ${{steps.version.outputs.prop}}
-          keep: 0
           token: ${{secrets.GITHUB_TOKEN}}
           names: |
             struggle
