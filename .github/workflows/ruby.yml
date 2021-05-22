@@ -13,11 +13,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
+
+      - name: get version
+        id: version
+        uses: notiz-dev/github-action-json-property@release
+        with:
+          path: "package.json"
+          prop_path: "version"
+
+      - run: echo ${{steps.version.outputs.prop}}
+
       - uses: senmu/download-json-property-action@v1.0.0
         id: ruby-version
         with:
-          url: 'https://pages.github.com/versions.json'
+          url: "https://pages.github.com/versions.json"
           property_path: ruby
 
       - uses: ruby/setup-ruby@v1
