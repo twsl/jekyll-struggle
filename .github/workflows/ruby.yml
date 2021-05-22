@@ -34,46 +34,29 @@ jobs:
           ruby-version: ${{ steps.ruby-version.outputs.value }} # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      - name: Install Rake
-        run: gem install rake
-
       - run: bundle exec jekyll build --incremental
 
-      - name: Delete GitHub Packages Versions
-        uses: WPMedia/delete-github-package-versions@v0.4.10
-        with:
-          version: ${{steps.version.outputs.prop}}
-          keep: 0
-          token: ${{secrets.GITHUB_TOKEN}}
-          names: |
-            struggle
-
-      #- uses: actions/delete-package-versions@v1
+      #- name: Delete GitHub Packages Versions
+      #  uses: WPMedia/delete-github-package-versions@v0.4.10
       #  with:
-      #    package-version-ids: ${{steps.version.outputs.prop}}
-      
+      #    semver-pattern: "=0.0.1" #${{steps.version.outputs.prop}}
+      #    token: ${{secrets.GITHUB_TOKEN}}
+      #    names: |
+      #      struggle      
 
-      # # https://github.com/marketplace/actions/release-gem-to-github-packages
-      # - name: Publish Gem to Github
-      #   uses: jstastny/publish-gem-to-github@master
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     owner: twsl
+      # https://github.com/marketplace/actions/release-gem-to-github-packages
+      - name: Publish Gem to Github
+        if: contains(github.ref, 'refs/tags/v')
+        uses: jstastny/publish-gem-to-github@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          owner: twsl
 
       # https://github.com/dawidd6/action-publish-gem
-      - name: Publish gem
-        uses: dawidd6/action-publish-gem@v1.2.0
-        with:
-          # Rubygems.org API key
-          api_key: ${{secrets.RUBYGEMS_API_KEY}}
-          # GitHub Packages token
-          github_token: ${{secrets.GITHUB_TOKEN}}
-
-      # https://github.com/marketplace/actions/publish-to-rubygems
-      - name: Release Gem
-        if: contains(github.ref, 'refs/tags/v')
-        uses: cadwallion/publish-rubygems-action@master
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
-          RELEASE_COMMAND: rake release
+      #- name: Publish gem
+      #  uses: dawidd6/action-publish-gem@v1.2.0
+      #  with:
+      #    # Rubygems.org API key
+      #    api_key: ${{secrets.RUBYGEMS_API_KEY}}
+      #    # GitHub Packages token
+      #    github_token: ${{secrets.GITHUB_TOKEN}}
