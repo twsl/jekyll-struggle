@@ -42,11 +42,12 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           owner: twsl
-      # # https://github.com/marketplace/actions/publish-to-rubygems
-      # - name: Release Gem
-      #   if: contains(github.ref, 'refs/tags/v')
-      #   uses: cadwallion/publish-rubygems-action@master
-      #   env:
-      #     GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      #     RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
-      #     RELEASE_COMMAND: rake release
+
+      # https://github.com/marketplace/actions/publish-to-rubygems
+      - name: Release Gem
+        if: contains(github.ref, 'refs/tags/v')
+        uses: cadwallion/publish-rubygems-action@master
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
+          RELEASE_COMMAND: rake release
