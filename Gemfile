@@ -17,6 +17,8 @@ group :jekyll_plugins do
   gem "jekyll-gist", "~> 1.5.0"
   gem "jekyll-paginate", "~> 1.1.0"
   gem "jekyll-sitemap", "~> 1.4.0"
+  # temp lock
+  gem 'execjs', '2.7.0'
 end
 
 gem "kramdown-math-katex", "~> 1.0.1"
