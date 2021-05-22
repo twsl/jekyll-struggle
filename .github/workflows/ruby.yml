@@ -39,18 +39,19 @@ jobs:
 
       - run: bundle exec jekyll build --incremental
 
+      - name: Delete GitHub Packages Versions
+        uses: WPMedia/delete-github-package-versions@v0.4.10
+        with:
+          version: ${{steps.version.outputs.prop}}
+          keep: 0
+          token: ${{secrets.GITHUB_TOKEN}}
+          names: |
+            struggle
+
       #- uses: actions/delete-package-versions@v1
       #  with:
       #    package-version-ids: ${{steps.version.outputs.prop}}
       
-      - name: Delete Gem
-        uses: guptalakshya92/delete_gem@v1
-        with:
-          package-name: struggle
-          organisation-name: twsl
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          OWNER: twsl
 
       # # https://github.com/marketplace/actions/release-gem-to-github-packages
       # - name: Publish Gem to Github
