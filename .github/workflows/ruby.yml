@@ -39,7 +39,7 @@ jobs:
       - name: Delete GitHub Packages Versions
         uses: WPMedia/delete-github-package-versions@v0.4.10
         with:
-          version: 0.0.1 #"${{steps.version.outputs.prop}}"
+          version: "0.0.1" #"${{steps.version.outputs.prop}}"
           token: ${{secrets.GITHUB_TOKEN}}
           names: |
             struggle      
