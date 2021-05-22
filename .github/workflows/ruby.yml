@@ -36,12 +36,12 @@ jobs:
 
       - run: bundle exec jekyll build --incremental
 
-      # https://github.com/marketplace/actions/release-gem-to-github-packages
-      - name: Publish Gem to Github
-        uses: jstastny/publish-gem-to-github@master
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          owner: twsl
+      # # https://github.com/marketplace/actions/release-gem-to-github-packages
+      # - name: Publish Gem to Github
+      #   uses: jstastny/publish-gem-to-github@master
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     owner: twsl
 
       # https://github.com/marketplace/actions/publish-to-rubygems
       - name: Release Gem
