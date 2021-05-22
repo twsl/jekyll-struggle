@@ -8,11 +8,28 @@ search_exclude: true
 <script type="text/javascript" src="{{ '/assets/js/search.js' | relative_url }}"></script>
 <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
 
-<div class="search">
-  <div class="search-input-wrap">
-    <input type="text" class="js-search-input search-input input-block form-control" tabindex="0" placeholder="Search {{ site.title }}"
-           aria-label="Search {{ site.title }}" autocomplete="off">
+
+<section class="section bg-light py-5">
+  <div class="container">
+    <div class="title text-center">
+      <h2>Search</h2>
+      <h4>Find content easily</h4>
+    </div>
+
+    <div class="section-content pt-3">
+      <div class="search">
+
+        <form>
+          <div class="mb-3">
+            <input id="searchInput" type="text" class="js-search-input search-input input-block form-control" tabindex="0" placeholder="Search {{ site.title }}"
+                   aria-label="Search {{ site.title }}" autocomplete="off" aria-describedby="searchHelp">
+            <div id="searchHelp" class="form-text">Your search data will not be logged.</div>
+          </div>
+
+          <div class="js-search-results search-results-wrap"></div>
+        </form>
+      </div>
+    </div>
+
   </div>
-  <br>
-  <div class="js-search-results search-results-wrap"></div>
-</div>
+</section>
