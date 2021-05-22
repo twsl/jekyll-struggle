@@ -39,9 +39,9 @@ jobs:
 
       - run: bundle exec jekyll build --incremental
 
-      - uses: actions/delete-package-versions@v1
-        with:
-          package-version-ids: ${{steps.version.outputs.prop}}
+      #- uses: actions/delete-package-versions@v1
+      #  with:
+      #    package-version-ids: ${{steps.version.outputs.prop}}
 
       # # https://github.com/marketplace/actions/release-gem-to-github-packages
       # - name: Publish Gem to Github
