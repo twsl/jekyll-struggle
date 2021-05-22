@@ -2,35 +2,70 @@
 layout: categories
 permalink: /categories/
 title: Categories
+layout: default
 search_exclude: true
 ---
 
-{% if site.categories.size > 0 %}
-<h2>Contents</h2>
+<section class="section bg-light py-5">
+  <div class="container">
+    <div class="title text-center">
+      <h2>Categories</h2>
+      <h4>Find content easily</h4>
+    </div>
+    <div class="section-content pt-5">
 
-{% assign categories = "" | split:"" %}
-{% for c in site.categories %}
-{% assign categories = categories | push: c[0] %}
-{% endfor %}
-{% assign categories = categories | sort_natural %}
 
-<ul>
-  {% for category in categories %}
-  <li><a href="#{{ category }}">{{ category }}</a></li>
-  {% endfor %}
-</ul>
+      {% if site.categories.size > 0 %}
 
-{% for category in categories %}
-<h3 id="{{ category }}"><i class="fas fa-tags category-tags-icon"></i></i> {{ category }}</h3>
-<a name="{{ category | slugize }}"></a>
-{% for post in site.categories[category] %}
-{% if post.hide != true %}
-{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-<article class="archive-item">
-  <p class="post-meta post-meta-title"><a class="page-meta" href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a> • {{ post.date | date: date_format }}</p>
-</article>
-{% endif %}
-{% endfor %}
-{% endfor %}
 
-{% endif %}
+      {%- assign date_format = site.struggle.date_format | default: "%b %-d, %Y" -%}
+
+      {% assign categories = "" | split:"" %}
+
+      {% for c in site.categories %}
+      {% assign categories = categories | push: c[0] %}
+      {% endfor %}
+
+      {% assign categories = categories | sort_natural %}
+
+      <div class="accordion" id="accordionCategories">
+        {% for category in categories %}
+
+        <div class="accordion-item">
+          <h2 id="{{ category }}" class="accordion-header" id="heading{{ category }}">
+            <button class="accordion-button {% if forloop.index != 1 %} collapsed{% endif %}" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse{{ category }}" aria-expanded="true" aria-controls="collapse{{ category }}">
+              <span class="pe-1"><i class="fas fa-tags"></i></span> {{ category | slugize }}
+            </button>
+          </h2>
+          <div id="collapse{{ category }}" class="accordion-collapse collapse {% if forloop.index == 1 %} show{% endif %}"
+               aria-labelledby="heading{{ category }}"
+               data-bs-parent="#accordionCategories">
+            <div class="accordion-body">
+              <table class="table table-hover">
+                <tbody>
+                  {% for post in site.categories[category] %}
+                  {% if post.hide != true %}
+                  <tr>
+                    <th scope="row">{{ post.date | date: date_format }}</th>
+                    <td>
+                      <a class="page-meta" href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+                    </td>
+                  </tr>
+                  {% endif %}
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+
+
+      {% endif %}
+
+    </div>
+  </div>
+</section>

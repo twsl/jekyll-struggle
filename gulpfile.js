@@ -44,6 +44,14 @@ gulp.task('vendor', function (cb) {
 
   cb();
 
+  // lunr
+  gulp.src([
+    './node_modules/lunr/*.js'
+  ])
+    .pipe(gulp.dest('./assets/vendor/lunr'));
+
+  cb();
+
 });
 
 gulp.task("default", gulp.parallel('vendor'));
