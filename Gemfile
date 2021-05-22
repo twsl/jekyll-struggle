@@ -28,5 +28,6 @@ group :jekyll_plugins do
   gem 'execjs', '2.7.0'
 end
 
+gem "kramdown-parser-gfm", "~> 1.1.0"
 gem "kramdown-math-katex", "~> 1.0.1"
 gem "jemoji", "~> 0.12.0"
