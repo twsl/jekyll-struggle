@@ -20,6 +20,23 @@ _sass/minima/
 
 See: <https://code.visualstudio.com/docs/remote/create-dev-container>
 
+
+
+
+
+
+
+
+
+
+
+https://blog.webjeda.com/jekyll-categories/
+
+
+
+
+
+
 ## Inspo
 https://dribbble.com/fintory
 https://fintory.com/en/blog/why-is-motion-design-so-important-to-user-experience

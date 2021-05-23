@@ -44,6 +44,10 @@ theme: struggle
 include:
   - _pages
 
+comments: true
+
+badges: true
+
 # This specifies what badges are turned on by default for notebook posts.
 default_badges:
   github: true
@@ -75,3 +79,14 @@ plugins:
 
 paginate: 5
 paginate_path: /:num/
+
+toc:
+  min_level: 1
+  max_level: 6
+  ordered_list: false
+  no_toc_section_class: no_toc_section
+  list_id: toc
+  list_class: list-group
+  sublist_class: sublist-toc-test
+  item_class: list-group-item
+  item_prefix: toc-

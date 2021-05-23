@@ -3,8 +3,8 @@ layout: post
 title: "This post demonstrates post content styles"
 categories: junk
 author:
-- Bart Simpson
-- Nelson Mandela Muntz
+- twsl
+- miscme
 meta: "Springfield"
 ---
 
@@ -105,7 +105,7 @@ lorem                 | lorem ipsum           | lorem ipsum dolor     | lorem ip
 lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit
 lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit
 lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit
-
+{: .table }
 
 Title 1 | Title 2 | Title 3 | Title 4
 --- | --- | --- | ---

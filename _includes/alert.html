@@ -1,4 +1,21 @@
-<div class="Toast Toast--warning googoo">
-  <span class="Toast-icon">{% octicon alert %}</span>
-  <span class="Toast-content">{{include.text}}</span>
+<div class="alert alert-{{include.type}}" role="alert">
+  <p>
+    <span class="pe-1">
+      {% case include.type %}
+      {% when "danger" %}
+      <!-- {% octicon x-circle height:16 fill:"currentColor" %} -->
+      <i class="fas fa-times-circle"></i>
+      {% when "warning" %}
+      <!-- {% octicon alert height:16 fill:"currentColor" %} -->
+      <i class="fas fa-exclamation-circle"></i>
+      {% when "info" %}
+      <!-- {% octicon info height:16 fill:"currentColor" %} -->
+      <i class="fas fa-info-circle"></i>
+      {% when "success" %}
+      <!-- {% octicon issue-closed height:16 fill:"currentColor" %} -->
+      <i class="fas fa-check-circle"></i>
+      {% endcase %}
+    </span>
+    {{ include.text }}
+  </p>
 </div>

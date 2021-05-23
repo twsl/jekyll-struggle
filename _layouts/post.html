@@ -8,6 +8,8 @@ layout: default
         <div class="card-body">
           <header class="post-header">
             <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+
+            <!-- Start Description -->
             {%- if page.description -%}
             {%- if site.html_escape.description -%}
             <p class="page-description">{{ page.description | escape }}</p>
@@ -15,7 +17,10 @@ layout: default
             <p class="page-description">{{ page.description }}</p>
             {%- endif -%}
             {%- endif -%}
+            <!-- End Description -->
+
             <p class="post-meta post-meta-title">
+              <!-- Start Published/Modified -->
               {%- assign date_format = site.struggle.date_format | default: "%b %-d, %Y" -%}
               <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 {{ page.date | date: date_format }}
@@ -27,22 +32,23 @@ layout: default
                 {{ mdate | date: date_format }}
               </time>
               {%- endif -%}
+              <!-- End Published/Modified -->
+
+              <!-- Start Authors -->
               {%- if page.author -%}
-              • {% for author in page.author %}
+              {% for author in page.author %}
               <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <span class="p-author h-card" itemprop="name">{{ author }}</span>
+                <span class="p-author h-card" itemprop="name">
+                  <a href="{{ 'about' | relative_url }}#{{ author }}">{{ author }}</a>
+                </span>
               </span>
-
-              {% assign author = site.data.authors[author] %}
-              {% if author %}
-              {% include author.html %}
-              {% endif %}
-
               {%- if forloop.last == false %}, {% endif -%}
               {% endfor %}
               {%- endif -%}
+              <!-- End Authors -->
             </p>
 
+            <!-- Start Categories -->
             {% if page.categories.size > 0 and site.show_tags %}
             <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i>
               {% for category in page.categories %}
@@ -51,7 +57,9 @@ layout: default
               {% endfor %}
             </p>
             {% endif %}
+            <!-- End Categories -->
 
+            <!-- Start Notebook -->
             {% if page.layout == 'notebook' %}
             {% if page.badges or page.badges == nil %}
             <div class="pb-5 d-flex flex-wrap flex-justify-end">
@@ -61,11 +69,25 @@ layout: default
             </div>
             {% endif -%}
             {% endif -%}
+            <!-- End Notebook -->
 
           </header>
 
+
           <div class="post-content e-content" itemprop="articleBody">
-            {{ content | toc }}
+            <div>
+              <!-- Start TOC -->
+              <div id="table-of-contents">
+                {{ content | toc_only }}
+              </div>
+              <!-- End TOC -->
+
+              <!-- Start Content -->
+              <div id="markdown-content py-5">
+                {{ content | inject_anchors }}
+              </div>
+              <!-- End Content -->
+            </div>
           </div>
 
           {%- if page.comments -%}

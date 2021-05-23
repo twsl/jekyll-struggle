@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "@primer/octicons": "^14.1.0",
     "aos": "^2.3.4",
     "bootstrap": "^5.0.1",
     "hypothesis": "^1.787.0",

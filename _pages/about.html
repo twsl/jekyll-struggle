@@ -19,18 +19,7 @@ permalink: /about/
         {%- assign author_k = author_kv | keys -%}
         {%- assign author = author_k[1] -%}
 
-        <div class="col-xl-3 col-lg-6 col-sm-6 mb-5">
-          <div class="bg-white rounded shadow-sm py-5 px-4">
-            <img src="{{ author.picture | relative_url }}" alt="author"
-                 width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm animated fadeInUp" data-animation="fadeInUp">
-            <h5 class="mb-0">{{ author.name }}</h5>
-            <span class="small text-uppercase text-muted">{{ author.bio }}</span>
-
-            <ul class="social mb-0 list-inline mt-3">
-              {%- include social_user.html author=author -%}
-            </ul>
-          </div>
-        </div>
+        {%- include author.html author=author -%}
 
         {%- endfor -%}
 

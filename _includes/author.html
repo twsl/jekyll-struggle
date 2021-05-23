@@ -1,30 +1,14 @@
-<div class="read-more">
-  <div class="read-more-header">
-    <a href="{{ author.site }}" class="read-more-btn">About the Author</a>
-  </div><!-- /.read-more-header -->
-  <div class="read-more-content author-info">
-    <h3>{{author.name}}</h3>
-    <div class="author-container">
-      {% if author.avatar_url %}
-      <img class="author-img" src="{{author.avatar_url}}" alt="{{author.name}}" />
-      {% else %}
-      <img class="author-img" src="{{site.url}}/{{author.avatar}}" alt="{{author.name}}" />
-      {% endif %}
-      <div class="author-bio">{{author.bio}}</div>
-    </div>
-    <div class="author-share">
-      <ul class="list-inline social-buttons">
-        {% for network in author.social %}
-        <li><a href="{{ network.url }}" target="_blank"><i class="fa fa-{{ network.title }} fa-fw"></i></a></li>
-        {% endfor %}
-      </ul>
-      {% if author.github %}
-      <a aria-label="Follow @{{author.github}} on GitHub" data-style="mega" href="https://github.com/{{author.github}}" class="github-button">Follow
-        @{{author.github}}</a>
-      {% endif %}
-      <br>
-      {% if author.twitter %}
-      <a href="https://twitter.com/{{author.twitter}}" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @{{author.twitter}}</a>
-      {% endif %}
-    </div>
+<!-- Start Author -->
+<div id="{{ author.name }}" class="col-xl-3 col-lg-6 col-sm-6 mb-5">
+  <div class="bg-white rounded shadow-sm py-5 px-4">
+    <img src="{{ author.picture | relative_url }}" alt="author"
+         width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm animated fadeInUp" data-animation="fadeInUp">
+    <h5 class="mb-0">{{ author.name }}</h5>
+    <span class="small text-uppercase text-muted">{{ author.bio }}</span>
+
+    <ul class="social mb-0 list-inline mt-3">
+      {%- include social_user.html author=author -%}
+    </ul>
   </div>
+</div>
+<!-- End Author -->

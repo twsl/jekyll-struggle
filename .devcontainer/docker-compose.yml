@@ -33,5 +33,8 @@ services:
     # security_opt:
     #   - seccomp:unconfined
 
+    environment:
+      TZ: "Europe/Berlin"
+
     # Overrides default command so things don't shut down after the process ends.
     command: /bin/sh -c "while sleep 1000; do :; done"

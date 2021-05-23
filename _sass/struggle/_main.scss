@@ -26,18 +26,23 @@
 /* ================= */
 
 @import "components/components.button";
+@import "components/components.code";
 @import "components/components.form";
 @import "components/components.header";
 @import "components/components.section";
+@import "components/components.table";
 @import "components/components.ul";
 
 /* ================= */
 // LAYOUT
 /* ================= */
+@import "layout/layout.alert";
 @import "layout/layout.card";
 @import "layout/layout.dropdown";
 @import "layout/layout.footer";
 @import "layout/layout.hero";
+@import "layout/layout.highlight";
+@import "layout/layout.list-group";
 @import "layout/layout.navbar";
 @import "layout/layout.preloader";
 @import "layout/layout.scrolltop";

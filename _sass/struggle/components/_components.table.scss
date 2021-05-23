@@ -1,0 +1,6 @@
+.table {
+}
+
+table {
+  @extend .table !optional;
+}

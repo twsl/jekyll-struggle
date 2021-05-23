@@ -39,11 +39,15 @@ And a numbered list:
 
 > This is a quotation
 
-{% include alert.html text="You can include alert boxes" %}
+{% include alert.html text="You can include alert boxes" type="danger" %}
 
 ...and...
 
-{% include info.html text="You can include info boxes" %}
+{% include alert.html text="You can include info boxes" type="info" %}
+
+...and...
+
+{% include alert.html text="You can include warning boxes" type="warning" %}
 
 ## Images
 
@@ -101,3 +105,12 @@ key: value
 
 [^1]: This is the footnote.
 
+## More Headers
+
+test
+
+### Test
+
+### Section
+
+### Level

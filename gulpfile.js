@@ -18,6 +18,13 @@ gulp.task('vendor', function (cb) {
   ])
     .pipe(gulp.dest('./assets/vendor/fontawesome'));
 
+  // octicons
+  gulp.src([
+    './node_modules/@primer/octicons/build/**/*'
+  ])
+    .pipe(gulp.dest('./assets/vendor/octicons'));
+
+
   // aos
   gulp.src([
     './node_modules/aos/dist/**/*'
