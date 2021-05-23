@@ -1,0 +1,12 @@
+.alert {
+  border: 0 !important;
+  border-left: 0.25rem solid !important;
+  border-radius: 0.35rem !important;
+  background-color: $gray-100 !important;
+}
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    border-color: #{$value} !important;
+  }
+}
