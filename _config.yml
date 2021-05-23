@@ -38,7 +38,7 @@ struggle:
 #   - tags.html
 
 # Build settings
-theme: struggle
+theme: jekyll-struggle
 
 # this setting allows you to keep pages organized in the _pages folder
 include:
