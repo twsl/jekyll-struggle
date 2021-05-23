@@ -42,21 +42,22 @@ jobs:
       #    semver-pattern: "=0.0.1" #${{steps.version.outputs.prop}}
       #    token: ${{secrets.GITHUB_TOKEN}}
       #    names: |
-      #      struggle      
+      #      struggle
 
       # https://github.com/marketplace/actions/release-gem-to-github-packages
       - name: Publish Gem to Github
-        if: contains(github.ref, 'refs/tags/v')
+        continue-on-error: true
         uses: jstastny/publish-gem-to-github@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           owner: twsl
 
       # https://github.com/dawidd6/action-publish-gem
-      #- name: Publish gem
-      #  uses: dawidd6/action-publish-gem@v1.2.0
-      #  with:
-      #    # Rubygems.org API key
-      #    api_key: ${{secrets.RUBYGEMS_API_KEY}}
-      #    # GitHub Packages token
-      #    github_token: ${{secrets.GITHUB_TOKEN}}
+      - name: Publish gem
+        uses: dawidd6/action-publish-gem@v1.2.0
+        if: contains(github.ref, 'refs/tags/v')
+        with:
+          # Rubygems.org API key
+          api_key: ${{secrets.RUBYGEMS_API_KEY}}
+          # GitHub Packages token
+          github_token: ${{secrets.GITHUB_TOKEN}}
