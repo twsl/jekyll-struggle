@@ -36,7 +36,8 @@ jobs:
 
       - run: bundle exec jekyll build --incremental
 
-      - run: echo gem yank ${{ github.event.repository.name }} -v ${{steps.version.outputs.prop}}
+      # Try to yank repo in case it exists already
+      - run: gem yank ${{ github.event.repository.name }} -v ${{steps.version.outputs.prop}}
 
       # https://github.com/marketplace/actions/release-gem-to-github-packages
       - name: Publish Gem to Github

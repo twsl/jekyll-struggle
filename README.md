@@ -1,5 +1,7 @@
 # struggle
 
+[![Gem Version](https://badge.fury.io/rb/jekyll-struggle.svg)](https://badge.fury.io/rb/jekyll-struggle)
+
 A simple, sleek and modern Jekyll blog theme made with love and Bootstrap.
 
 ## fastpages
