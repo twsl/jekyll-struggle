@@ -36,21 +36,14 @@ jobs:
 
       - run: bundle exec jekyll build --incremental
 
-      #- name: Delete GitHub Packages Versions
-      #  uses: WPMedia/delete-github-package-versions@v0.4.10
-      #  with:
-      #    semver-pattern: "=0.0.1" #${{steps.version.outputs.prop}}
-      #    token: ${{secrets.GITHUB_TOKEN}}
-      #    names: |
-      #      struggle
-
       # https://github.com/marketplace/actions/release-gem-to-github-packages
-      # - name: Publish Gem to Github
-      #   continue-on-error: true
-      #   uses: jstastny/publish-gem-to-github@master
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     owner: twsl
+      - name: Publish Gem to Github
+        uses: jstastny/publish-gem-to-github@master
+        if: "!contains(github.ref, 'refs/tags/v')"
+        continue-on-error: true
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          owner: twsl
 
       # https://github.com/dawidd6/action-publish-gem
       - name: Publish gem
@@ -60,4 +53,4 @@ jobs:
           # Rubygems.org API key
           api_key: ${{secrets.RUBYGEMS_API_KEY}}
           # GitHub Packages token, not used, already pushed
-          #github_token: ${{secrets.GITHUB_TOKEN}}
+          github_token: ${{secrets.GITHUB_TOKEN}}
