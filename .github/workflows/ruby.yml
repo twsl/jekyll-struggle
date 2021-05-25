@@ -12,39 +12,46 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2        
 
-      - name: get version
+      - name: Get Version
         id: version
         uses: notiz-dev/github-action-json-property@release
         with:
           path: "package.json"
           prop_path: "version"
 
-      - run: echo ${{steps.version.outputs.prop}}
+      - name: Show Version
+        run: echo ${{steps.version.outputs.prop}}
 
-      - uses: senmu/download-json-property-action@v1.0.0
+      - name: Get Ruby Version
+        uses: senmu/download-json-property-action@v1.0.0
         id: ruby-version
         with:
           url: "https://pages.github.com/versions.json"
           property_path: ruby
 
-      - uses: ruby/setup-ruby@v1
+      - name: Setup Ruby ${{ steps.ruby-version.outputs.value }}
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ steps.ruby-version.outputs.value }} # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      - run: bundle exec jekyll build --incremental
-
-      #- name: Delete Gem
-      #  uses: guptalakshya92/delete_gem@v1
-      #  if: "!contains(github.ref, 'refs/tags/v')"
-      #  with:
-      #    package-name: ${{ github.event.repository.name }}
-      #    organisation-name: twsl
-      #  env:
-      #    GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      #    OWNER: twsl
+      - name: Build
+        run: bundle exec jekyll build --incremental
+      
+      - name: Yank Gem on Github
+        if: "!contains(github.ref, 'refs/tags/v')"
+        continue-on-error: true
+        run: |
+          mkdir -p $HOME/.gem
+          touch $HOME/.gem/credentials
+          chmod 0600 $HOME/.gem/credentials
+          printf -- "---\n:github: Bearer ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
+          gem yank ${{ github.event.repository.name }} -v ${{steps.version.outputs.prop}}
+        env:
+          GEM_HOST_API_KEY: "${{secrets.GITHUB_TOKEN}}"
 
       # https://github.com/marketplace/actions/release-gem-to-github-packages
       - name: Publish Gem to Github
@@ -54,9 +61,23 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           owner: twsl
-
+      
+      - name: Yank Gem
+        if: contains(github.ref, 'refs/tags/v')
+        continue-on-error: true
+        run: |
+          mkdir -p $HOME/.gem
+          touch $HOME/.gem/credentials
+          chmod 0600 $HOME/.gem/credentials
+          printf -- "---\n:rubygems_api_key: ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
+          gem yank ${{ github.event.repository.name }} -v ${{steps.version.outputs.prop}}
+        env:
+          # Make sure to update the secret name
+          # if yours isn't named RUBYGEMS_AUTH_TOKEN
+          GEM_HOST_API_KEY: "${{secrets.RUBYGEMS_API_KEY}}"
+          
       # https://github.com/dawidd6/action-publish-gem
-      - name: Publish gem
+      - name: Publish Gem
         uses: dawidd6/action-publish-gem@v1.2.0
         if: contains(github.ref, 'refs/tags/v')
         with:
