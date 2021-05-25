@@ -3,14 +3,7 @@
 source "https://rubygems.org"
 gemspec
 
-require 'json'
-require 'open-uri'
-# Use URI.open after github uses ruby 3
-versions = JSON.parse(open('https://pages.github.com/versions.json').read)
-
-#gem 'github-pages', versions['github-pages']
-
-gem "jekyll", ">= #{versions['jekyll']}"
+gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
 
 group :jekyll_plugins do
   gem "jekyll-autoprefixer", "~> 1.0.2"
@@ -30,5 +23,5 @@ end
 
 gem "jemoji"
 
-gem "kramdown-parser-gfm"
-gem "kramdown-math-katex"
+gem "kramdown-parser-gfm" if ENV["JEKYLL_VERSION"] == "~> 3.9"
+gem "kramdown-math-katex" if ENV["JEKYLL_VERSION"] == "~> 3.9"
