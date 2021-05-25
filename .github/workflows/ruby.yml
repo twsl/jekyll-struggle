@@ -65,7 +65,8 @@ jobs:
           # Names of the packages.
           names: ${{ github.event.repository.name }}
           # Specific version to delete. Defaults to null.
-          version: ${{steps.version.outputs.prop}}
+          semver-pattern: ${{steps.version.outputs.prop}}
+          keep: 0
           # If the action should only print what it would delete instead of actually deleting.
           dry-run: true
 
