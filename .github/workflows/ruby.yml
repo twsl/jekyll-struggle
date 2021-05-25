@@ -62,4 +62,4 @@ jobs:
           # Rubygems.org API key
           api_key: ${{secrets.RUBYGEMS_API_KEY}}
           # GitHub Packages token, not used, already pushed
-          github_token: ${{secrets.GITHUB_TOKEN}}
+          #github_token: ${{secrets.GITHUB_TOKEN}}
