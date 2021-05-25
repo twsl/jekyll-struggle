@@ -36,6 +36,15 @@ jobs:
 
       - run: bundle exec jekyll build --incremental
 
+      - name: Delete Gem
+        uses: guptalakshya92/delete_gem@v1
+        with:
+          package-name: ${{ github.event.repository.name }}
+          organisation-name: twsl
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          OWNER: twsl
+
       # https://github.com/marketplace/actions/release-gem-to-github-packages
       - name: Publish Gem to Github
         uses: jstastny/publish-gem-to-github@master
