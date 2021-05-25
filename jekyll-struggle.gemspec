@@ -22,11 +22,11 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= #{versions['ruby']}"
 
   spec.add_runtime_dependency "jekyll", ">= #{versions['jekyll']}"
-  spec.add_runtime_dependency "jekyll-feed", "~> 0.15.1"
+  spec.add_runtime_dependency "jekyll-feed", "~> 0.12"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.7.1"
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1.0"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4.0"
   spec.add_runtime_dependency 'jekyll-autoprefixer', "~> 1.0.2"
 
-  spec.add_development_dependency "bundler", "~> 2.2.15"
+  spec.add_development_dependency "bundler"
 end
