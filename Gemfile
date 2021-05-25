@@ -30,5 +30,5 @@ end
 
 gem "jemoji"
 
-gem "kramdown-parser-gfm" if versions['jekyll'] < 3.9
-gem "kramdown-math-katex" if versions['jekyll'] < 3.9
+gem "kramdown-parser-gfm"
+gem "kramdown-math-katex"
