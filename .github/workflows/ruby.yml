@@ -47,28 +47,25 @@ jobs:
       - name: Build
         run: bundle exec jekyll build --incremental
       
-      - name: Yank Gem on Github
-        if: "!contains(github.ref, 'refs/tags/v')"
-        continue-on-error: true
-        run: |
-          mkdir -p $HOME/.gem
-          touch $HOME/.gem/credentials
-          chmod 0600 $HOME/.gem/credentials
-          printf -- "---\n:github: Bearer ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
-          gem yank ${{ github.event.repository.name }} -v ${{steps.version.outputs.prop}} --host "https://rubygems.pkg.github.com/${{github.repository_owner}}"
-        env:
-          GEM_HOST_API_KEY: "${{secrets.GITHUB_TOKEN}}"
+      # Deleting a package/yanking a gem on Github via CLI is not allowed
+      #- name: Yank Gem on Github
+      #  if: "!contains(github.ref, 'refs/tags/v')"
+      #  continue-on-error: true
+      #  run: |
+      #    mkdir -p $HOME/.gem
+      #    touch $HOME/.gem/credentials
+      #    chmod 0600 $HOME/.gem/credentials
+      #    printf -- "---\n:github: Bearer ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
+      #    gem yank ${{ github.event.repository.name }} -v ${{steps.version.outputs.prop}} --host "https://rubygems.pkg.github.com/${{github.repository_owner}}"
+      #  env:
+      #    GEM_HOST_API_KEY: "${{secrets.GITHUB_TOKEN}}"
           
-      - name: Delete github package versions
+      - name: Delete Gem on Github
         uses: JackHowa/delete-github-package-versions@v0.4.9
         with:
-          # Names of the packages.
           names: ${{ github.event.repository.name }}
-          # Specific version to delete. Defaults to null.
           semver-pattern: ${{steps.version.outputs.prop}}
           keep: 0
-          # If the action should only print what it would delete instead of actually deleting.
-          dry-run: true
 
       # https://github.com/marketplace/actions/release-gem-to-github-packages
       - name: Publish Gem to Github
@@ -89,8 +86,6 @@ jobs:
           printf -- "---\n:rubygems_api_key: ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
           gem yank ${{ github.event.repository.name }} -v ${{steps.version.outputs.prop}}
         env:
-          # Make sure to update the secret name
-          # if yours isn't named RUBYGEMS_AUTH_TOKEN
           GEM_HOST_API_KEY: "${{secrets.RUBYGEMS_API_KEY}}"
           
       # https://github.com/dawidd6/action-publish-gem
@@ -100,5 +95,5 @@ jobs:
         with:
           # Rubygems.org API key
           api_key: ${{secrets.RUBYGEMS_API_KEY}}
-          # GitHub Packages token, not used, already pushed
+          # GitHub Packages token, not used, already pushed in previous step
           #github_token: ${{secrets.GITHUB_TOKEN}}
