@@ -55,9 +55,19 @@ jobs:
           touch $HOME/.gem/credentials
           chmod 0600 $HOME/.gem/credentials
           printf -- "---\n:github: Bearer ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
-          gem yank ${{ github.event.repository.name }} -v ${{steps.version.outputs.prop}} --host "https://rubygems.pkg.github.com/${{github.event.repository.owner.login}}"
+          gem yank ${{ github.event.repository.name }} -v ${{steps.version.outputs.prop}} --host "https://rubygems.pkg.github.com/${{github.repository_owner}}"
         env:
           GEM_HOST_API_KEY: "${{secrets.GITHUB_TOKEN}}"
+          
+      - name: Delete github package versions
+        uses: JackHowa/delete-github-package-versions@v0.4.9
+        with:
+          # Names of the packages.
+          names: ${{ github.event.repository.name }}
+          # Specific version to delete. Defaults to null.
+          version: ${{steps.version.outputs.prop}}
+          # If the action should only print what it would delete instead of actually deleting.
+          dry-run: true
 
       # https://github.com/marketplace/actions/release-gem-to-github-packages
       - name: Publish Gem to Github
