@@ -32,7 +32,7 @@ jobs:
           url: "https://pages.github.com/versions.json"
           property_path: ruby
 
-      - name: Setup Ruby ${{ steps.ruby-version.outputs.value }}
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ steps.ruby-version.outputs.value }} # Not needed with a .ruby-version file
