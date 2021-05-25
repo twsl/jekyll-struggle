@@ -44,6 +44,14 @@ jobs:
           ruby-version: ${{ steps.ruby-version.outputs.value }} # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 14
+          
+      - name: Install dependencies
+        run: bundle install && yarn install && gulp
+
       - name: Build
         run: bundle exec jekyll build --incremental
       
