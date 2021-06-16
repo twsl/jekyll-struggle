@@ -14,7 +14,7 @@
     "@primer/octicons": "^14.2.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.0.1",
-    "hypothesis": "^1.795.0",
+    "hypothesis": "^1.800.0",
     "jquery": "^3.6.0",
     "katex": "^0.13.11",
     "lunr": "^2.3.9",
