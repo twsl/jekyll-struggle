@@ -1319,10 +1319,10 @@ matchdep@^2.0.0:
     resolve "^1.4.0"
     stack-trace "0.0.10"
 
-mathjax@^3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/mathjax/-/mathjax-3.1.4.tgz#4e8932d12845c0abae8b7f1976ea98cb505e8420"
-  integrity sha512-Okmc+F3l7vRWNMALbH0HMMoTJWVn1cbeDbybHppCeophIGdFS+xxD/OffYpZirUOHzesZostpzEwsLSst+4W8w==
+mathjax@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/mathjax/-/mathjax-3.2.0.tgz#ea7c317f8c81776ecfc83b294fc313046bf7f726"
+  integrity sha512-PL+rdYRK4Wxif+SQ94zP/L0sv6/oW/1WdQiIx0Jvn9FZaU5W9E6nlIv8liYAXBNPL2Fw/i+o/mZ1212eSzn0Cw==
 
 micromatch@^3.0.4, micromatch@^3.1.10, micromatch@^3.1.4:
   version "3.1.10"
