@@ -13,7 +13,7 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@primer/octicons": "^15.0.0",
     "aos": "^2.3.4",
-    "bootstrap": "^5.0.2",
+    "bootstrap": "^5.1.0",
     "hypothesis": "^1.833.0",
     "jquery": "^3.6.0",
     "katex": "^0.13.13",
