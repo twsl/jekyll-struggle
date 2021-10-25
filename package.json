@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "@primer/octicons": "^16.0.0",
+    "@primer/octicons": "^16.1.0",
     "aos": "^2.3.4",
     "bootstrap": "^5.1.3",
     "hypothesis": "^1.888.0",
