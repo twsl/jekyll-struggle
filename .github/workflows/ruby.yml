@@ -32,7 +32,7 @@ jobs:
         run: echo ${{steps.version.outputs.prop}}
 
       - name: Get Ruby Version
-        uses: senmu/download-json-property-action@v1.0.0
+        uses: senmu/download-json-property-action@v1.1.0
         id: ruby-version
         with:
           url: "https://pages.github.com/versions.json"
