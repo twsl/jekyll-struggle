@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2        
+        uses: actions/checkout@v3        
 
       - name: Dump Github context
         run:   echo "$GITHUB_CONTEXT"
@@ -32,7 +32,7 @@ jobs:
         run: echo ${{steps.version.outputs.prop}}
 
       - name: Get Ruby Version
-        uses: senmu/download-json-property-action@v1.0.0
+        uses: senmu/download-json-property-action@v1.1.0
         id: ruby-version
         with:
           url: "https://pages.github.com/versions.json"
@@ -45,7 +45,7 @@ jobs:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v3
         with:
           node-version: 14
           

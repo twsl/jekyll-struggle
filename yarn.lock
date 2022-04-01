@@ -2,15 +2,15 @@
 # yarn lockfile v1
 
 
-"@fortawesome/fontawesome-free@^5.15.3":
-  version "5.15.3"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.3.tgz#c36ffa64a2a239bf948541a97b6ae8d729e09a9a"
-  integrity sha512-rFnSUN/QOtnOAgqFRooTA3H57JLDm0QEG/jPdk+tLQNL/eWd+Aok8g3qCI+Q1xuDPWpGW/i9JySpJVsq8Q0s9w==
+"@fortawesome/fontawesome-free@^6.1.1":
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-6.1.1.tgz#bf5d45611ab74890be386712a0e5d998c65ee2a1"
+  integrity sha512-J/3yg2AIXc9wznaVqpHVX3Wa5jwKovVF0AMYSnbmcXTiL3PpRPfF58pzWucCwEiCJBp+hCNRLWClTomD8SseKg==
 
-"@primer/octicons@^14.1.0":
-  version "14.1.0"
-  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-14.1.0.tgz#8108f2328e8fcaf1f652a5724608d9343dccefa2"
-  integrity sha512-I/gRlM2meKPKXFN/1fxLoigPXvAUsivxRCih7vgeO7o4qrNNsl6Ah85l3UBbFi0t7ttjMde2+bS1A32a1Hu0BA==
+"@primer/octicons@^17.0.0":
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-17.0.0.tgz#9dc752aeb3d2269f7c7827f04148ef5e55555374"
+  integrity sha512-DiIjtous4XPuR2deTctD3/RVZy/vRzVYBgYYvHV313MmTfkbVP60qLH5txrT3/bYNvnb0poNDelLS6U0kqlvHA==
   dependencies:
     object-assign "^4.1.1"
 
@@ -212,10 +212,10 @@ bindings@^1.5.0:
   dependencies:
     file-uri-to-path "1.0.0"
 
-bootstrap@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.0.1.tgz#e7939d599119dc818a90478a2a299bdaff037e09"
-  integrity sha512-Fl79+wsLOZKoiU345KeEaWD0ik8WKRI5zm0YSPj2oF1Qr+BO7z0fco6GbUtqjoG1h4VI89PeKJnMsMMVQdKKTw==
+bootstrap@^5.1.3:
+  version "5.1.3"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.1.3.tgz#ba081b0c130f810fa70900acbc1c6d3c28fa8f34"
+  integrity sha512-fcQztozJ8jToQWXxVuEyXWW+dSo8AiXWKwiSSrKWsRB/Qt+Ewwza+JWoLKiTuQLaEPhdNAJ7+Dosc9DOIqNy7Q==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -373,10 +373,10 @@ color-support@^1.1.3:
   resolved "https://registry.yarnpkg.com/color-support/-/color-support-1.1.3.tgz#93834379a1cc9a0c61f82f52f0d04322251bd5a2"
   integrity sha512-qiBjkpbMLO/HL68y+lh4q0/O1MZFj2RX6X/KmMa3+gJD3z+WwI1ZzDHysvqHGS3mP6mznPckpXmw1nI9cJjyRg==
 
-commander@^6.0.0:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-6.2.1.tgz#0792eb682dfbc325999bb2b84fddddba110ac73c"
-  integrity sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==
+commander@^8.0.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-8.3.0.tgz#4837ea1b2da67b9c616a67afbb0fafee567bca66"
+  integrity sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==
 
 component-emitter@^1.2.1:
   version "1.3.0"
@@ -946,10 +946,10 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
   integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
-hypothesis@^1.787.0:
-  version "1.787.0"
-  resolved "https://registry.yarnpkg.com/hypothesis/-/hypothesis-1.787.0.tgz#d418e2c26976e884f96c9d794a589c23ce68d6c3"
-  integrity sha512-X+/2EvGa8gHgf80vaIk3gWmP7vF8d9z6GxRICWkBUqFmpqC6OjJshCpLZJAe3OuiMYVeUQ5ZAmBXu4IHlRhU1Q==
+hypothesis@^1.1014.0:
+  version "1.1014.0"
+  resolved "https://registry.yarnpkg.com/hypothesis/-/hypothesis-1.1014.0.tgz#94852921d1c0a7e37356a1cb6fa3041894ccf06f"
+  integrity sha512-L0lUOwhXrQjgfvbkVKaDU/jONbnrG+kW3lkOy8yMFpwfTREc/+QG1w3bxdl/LGDgwLJKA0A/uoAUH0u6+UT6Ig==
 
 inflight@^1.0.4:
   version "1.0.6"
@@ -1190,12 +1190,12 @@ just-debounce@^1.0.0:
   resolved "https://registry.yarnpkg.com/just-debounce/-/just-debounce-1.1.0.tgz#2f81a3ad4121a76bc7cb45dbf704c0d76a8e5ddf"
   integrity sha512-qpcRocdkUmf+UTNBYx5w6dexX5J31AKK1OmPwH630a83DdVVUIngk55RSAiIGpQyoH0dlr872VHfPjnQnK1qDQ==
 
-katex@^0.13.11:
-  version "0.13.11"
-  resolved "https://registry.yarnpkg.com/katex/-/katex-0.13.11.tgz#66138ebf173f25ef130cd3a3ea3ea1d12a3f1362"
-  integrity sha512-yJBHVIgwlAaapzlbvTpVF/ZOs8UkTj/sd46Fl8+qAf2/UiituPYVeapVD8ADZtqyRg/qNWUKt7gJoyYVWLrcXw==
+katex@^0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.15.3.tgz#08781a7ed26800b20380d959d1ffcd62bca0ec14"
+  integrity sha512-Al6V7RJsmjklT9QItyHWGaQCt+NYTle1bZwB1e9MR/tLoIT1MXaHy9UpfGSB7eaqDgjjqqRxQOaQGrALCrEyBQ==
   dependencies:
-    commander "^6.0.0"
+    commander "^8.0.0"
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
@@ -1319,10 +1319,10 @@ matchdep@^2.0.0:
     resolve "^1.4.0"
     stack-trace "0.0.10"
 
-mathjax@^3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/mathjax/-/mathjax-3.1.4.tgz#4e8932d12845c0abae8b7f1976ea98cb505e8420"
-  integrity sha512-Okmc+F3l7vRWNMALbH0HMMoTJWVn1cbeDbybHppCeophIGdFS+xxD/OffYpZirUOHzesZostpzEwsLSst+4W8w==
+mathjax@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/mathjax/-/mathjax-3.2.0.tgz#ea7c317f8c81776ecfc83b294fc313046bf7f726"
+  integrity sha512-PL+rdYRK4Wxif+SQ94zP/L0sv6/oW/1WdQiIx0Jvn9FZaU5W9E6nlIv8liYAXBNPL2Fw/i+o/mZ1212eSzn0Cw==
 
 micromatch@^3.0.4, micromatch@^3.1.10, micromatch@^3.1.4:
   version "3.1.10"
