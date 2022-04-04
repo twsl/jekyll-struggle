@@ -946,10 +946,10 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
   integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
-hypothesis@^1.1014.0:
-  version "1.1014.0"
-  resolved "https://registry.yarnpkg.com/hypothesis/-/hypothesis-1.1014.0.tgz#94852921d1c0a7e37356a1cb6fa3041894ccf06f"
-  integrity sha512-L0lUOwhXrQjgfvbkVKaDU/jONbnrG+kW3lkOy8yMFpwfTREc/+QG1w3bxdl/LGDgwLJKA0A/uoAUH0u6+UT6Ig==
+hypothesis@^1.1023.0:
+  version "1.1023.0"
+  resolved "https://registry.yarnpkg.com/hypothesis/-/hypothesis-1.1023.0.tgz#153d7ab5b3d475138917cbd324e779b47d6c80b2"
+  integrity sha512-qYnK+Anj66GEv/5PEnjJ9DETcYgZoQu/Bo473sb/Jucw22JGXoOGuYfgGxyl4MDmJEQ19/d1HevrESbESrb+kQ==
 
 inflight@^1.0.4:
   version "1.0.6"
