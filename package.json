@@ -7,6 +7,7 @@
   "author": "twsl",
   "license": "MIT",
   "scripts": {
+    "start": "bundle exec jekyll serve --livereload --incremental",
     "release-it": "yarn version --patch && git push --follow-tags"
   },
   "dependencies": {

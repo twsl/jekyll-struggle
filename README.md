@@ -20,24 +20,7 @@ _sass/minima/
 
 ## Start
 
-See: <https://code.visualstudio.com/docs/remote/create-dev-container>
-
-
-
-
-
-
-
-
-
-
-
 https://blog.webjeda.com/jekyll-categories/
-
-
-
-
-
 
 ## Inspo
 https://dribbble.com/fintory

@@ -25,3 +25,5 @@ gem "jemoji"
 
 gem "kramdown-parser-gfm" if ENV["JEKYLL_VERSION"] == "~> 3.9"
 gem "kramdown-math-katex" if ENV["JEKYLL_VERSION"] == "~> 3.9"
+
+gem "webrick", "~> 1.7"
