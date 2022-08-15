@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-6.1.1.tgz#bf5d45611ab74890be386712a0e5d998c65ee2a1"
   integrity sha512-J/3yg2AIXc9wznaVqpHVX3Wa5jwKovVF0AMYSnbmcXTiL3PpRPfF58pzWucCwEiCJBp+hCNRLWClTomD8SseKg==
 
-"@primer/octicons@^17.2.0":
-  version "17.2.0"
-  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-17.2.0.tgz#6e9be44484100e069006958f28dc75eaba55b1ed"
-  integrity sha512-A3YetVbJX5J4JGa2AfVrEl1lE3FtT+7HdSzphFRs1QF5OgsUpkNbyjvVxeCxVZaG6zXYbbbPWsPF06PtsIyUWQ==
+"@primer/octicons@^17.4.1":
+  version "17.4.1"
+  resolved "https://registry.yarnpkg.com/@primer/octicons/-/octicons-17.4.1.tgz#278dd5d9c24e503746ab94856622820b8a1c5bf6"
+  integrity sha512-DPlnpsARphzx9+kQexKsfLafOa+3FL3MKxaIPxz/isXiiZWgOuNTV8awHZ2Mm1M45mPqsBerucrFE8z2zVCbrg==
   dependencies:
     object-assign "^4.1.1"
 
